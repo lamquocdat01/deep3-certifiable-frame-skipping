@@ -1,0 +1,9 @@
+
+===== SEND: CLEAR =====
+OK CLEAR erased=5 (run ids stay monotonic; next=9)
+
+===== SEND: MEASURE idle-skip 330 on-boot =====
+OK MEASURE armed mode=idle-skip secs=330 run_id=9 — power-cycle the board to run
+
+===== SEND: MEASURE status =====
+MEASURE armed mode=idle-skip secs=330 stored=0 next_run_id=9

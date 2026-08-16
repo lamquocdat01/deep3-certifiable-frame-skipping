@@ -1,0 +1,2 @@
+# Serial logs land here. Every number in C2A_REPORT.md must trace to a file in
+# this directory (monitor logs + host CSVs). Do not hand-edit these files.

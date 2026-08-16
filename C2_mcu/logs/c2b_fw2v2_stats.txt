@@ -1,0 +1,3 @@
+
+===== SEND: STATS =====
+STATS {"mode":"idle","R":10,"theta":8.00,"sweep_k":10,"fps":22.50,"open_frac":0.1005,"frames":1313,"opens":132,"infer_count":132,"infer_us_mean":70952.2,"infer_us_max":71014,"max_closed_run":9,"person":-36,"noperson":36,"heap_free":8500711,"psram_free":8199688,"power_on":0,"ina219":1,"power_mw_mean":0.00,"power_samples":0,"infer_enabled":1,"parked":0,"meas_running":0,"stored_runs":3}

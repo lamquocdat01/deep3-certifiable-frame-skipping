@@ -1,0 +1,130 @@
+
+===== SEND: POWER PROBE =====
+PROBE addr=0x40 sda=1 scl=2 ack=0 err=0x103 (ESP_ERR_INVALID_STATE)
+
+===== SEND: POWER SCAN =====
+E (29157) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29207) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29257) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29307) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29357) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29407) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29457) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29507) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29557) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29607) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29657) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29707) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29757) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29807) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29857) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29907) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (29957) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30007) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30057) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30107) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30157) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30207) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30257) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30307) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30357) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30407) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30457) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30507) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30557) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30607) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30657) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30707) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30757) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30807) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30857) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30907) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (30957) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31007) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31057) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31107) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31157) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31207) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31257) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31307) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31357) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31407) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31457) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31507) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31557) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31607) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31657) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31707) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31757) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31807) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31857) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31907) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (31957) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32007) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32057) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32107) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32157) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32207) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32257) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32307) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32357) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32407) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32457) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32507) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32557) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32607) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32657) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32707) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32757) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32807) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups 
+===== SEND: POWER PINS =====
+are correctly set up
+E (32857) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32907) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (32957) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33007) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33057) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33107) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33157) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33207) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33257) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33307) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33357) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33407) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33457) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33507) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33557) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33607) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33657) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33707) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33757) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33807) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33857) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33907) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (33957) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34007) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34057) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34107) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34157) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34207) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34257) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34307) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34357) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34407) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34457) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34507) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34557) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34607) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34657) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+E (34707) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up
+SCAN sda=1 scl=2 range=0x08..0x77 count=0
+SCAN done
+I (34710) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (34718) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (34727) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (34755) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (34775) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (34795) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+PINS sda_gpio=1 pu=1 pd=1 | scl_gpio=2 pu=1 pd=1
+PINS legend pu=1,pd=0 floating | pu=1,pd=1 held-HIGH(ok) | pu=0,pd=0 held-LOW(short)
+PINS note i2c bus torn down — reboot before POWER PROBE

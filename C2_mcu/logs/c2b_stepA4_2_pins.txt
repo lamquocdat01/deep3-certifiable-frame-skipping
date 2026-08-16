@@ -1,0 +1,11 @@
+
+===== SEND: POWER PINS =====
+I (31227) gpio: GPIO[1]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (31227) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (31232) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (31261) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (31281) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (31301) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+PINS sda_gpio=1 pu=1 pd=1 | scl_gpio=2 pu=1 pd=1
+PINS legend pu=1,pd=0 floating | pu=1,pd=1 held-HIGH(ok) | pu=0,pd=0 held-LOW(short)
+PINS note i2c bus torn down — reboot before POWER PROBE

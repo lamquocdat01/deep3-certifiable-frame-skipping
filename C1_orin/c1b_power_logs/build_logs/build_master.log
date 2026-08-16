@@ -1,0 +1,24 @@
+START Thứ năm, 16 Tháng 7 năm 2026 17:31:10 +07
+=== building yolov3u -> yolov3u_fp16.engine ===
+yolov3u rc=0
+-rw-rw-r-- 1 dat dat 211034172 Thg 7  16 17:37 yolov3u_fp16.engine
+[07/16/2026-17:37:53] [I] H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
+[07/16/2026-17:37:53] [I] GPU Compute Time: min = 24.812 ms, max = 25.6846 ms, mean = 25.0869 ms, median = 24.9791 ms, percentile(90%) = 25.5853 ms, percentile(95%) = 25.6215 ms, percentile(99%) = 25.6567 ms
+[07/16/2026-17:37:53] [I] D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
+[07/16/2026-17:37:53] [I] Total GPU Compute Time: 3.0606 s
+[07/16/2026-17:37:53] [W] * Throughput may be bound by Enqueue Time rather than GPU Compute and the GPU may be under-utilized.
+[07/16/2026-17:37:53] [W]   If not already in use, --useCudaGraph (utilize CUDA graphs where possible) may increase the throughput.
+[07/16/2026-17:37:53] [W] * GPU compute time is unstable, with coefficient of variance = 1.03336%.
+&&&& PASSED TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --onnx=yolov3u.onnx --saveEngine=yolov3u_fp16.engine --fp16 --memPoolSize=workspace:4096 --noDataTransfers --useCudaGraph
+=== building yolo26s -> yolo26s_fp16.engine ===
+yolo26s rc=0
+-rw-rw-r-- 1 dat dat 22782356 Thg 7  16 17:48 yolo26s_fp16.engine
+[07/16/2026-17:48:07] [I] Throughput: 103.069 qps
+[07/16/2026-17:48:07] [I] Latency: min = 9.67712 ms, max = 9.72549 ms, mean = 9.69818 ms, median = 9.69824 ms, percentile(90%) = 9.70825 ms, percentile(95%) = 9.71411 ms, percentile(99%) = 9.72009 ms
+[07/16/2026-17:48:07] [I] Enqueue Time: min = 0.0113525 ms, max = 0.0463867 ms, mean = 0.015221 ms, median = 0.013916 ms, percentile(90%) = 0.0198975 ms, percentile(95%) = 0.0217285 ms, percentile(99%) = 0.0297852 ms
+[07/16/2026-17:48:07] [I] H2D Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
+[07/16/2026-17:48:07] [I] GPU Compute Time: min = 9.67712 ms, max = 9.72549 ms, mean = 9.69818 ms, median = 9.69824 ms, percentile(90%) = 9.70825 ms, percentile(95%) = 9.71411 ms, percentile(99%) = 9.72009 ms
+[07/16/2026-17:48:07] [I] D2H Latency: min = 0 ms, max = 0 ms, mean = 0 ms, median = 0 ms, percentile(90%) = 0 ms, percentile(95%) = 0 ms, percentile(99%) = 0 ms
+[07/16/2026-17:48:07] [I] Total GPU Compute Time: 3.02583 s
+&&&& PASSED TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --onnx=yolo26s.onnx --saveEngine=yolo26s_fp16.engine --fp16 --memPoolSize=workspace:4096 --noDataTransfers --useCudaGraph
+ALL BUILD DONE Thứ năm, 16 Tháng 7 năm 2026 17:48:07 +07

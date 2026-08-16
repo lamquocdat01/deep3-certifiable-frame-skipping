@@ -1,0 +1,3 @@
+
+===== SEND: POWER PROBE =====
+PROBE addr=0x40 sda=1 scl=2 reg0x00=0x3FFF por_expect=0x399F ack=1 init_readback=0x399F

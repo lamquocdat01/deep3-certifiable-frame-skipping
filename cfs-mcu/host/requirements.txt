@@ -1,0 +1,5 @@
+pyserial>=3.5
+# C2b USB-meter logging (log_um24c.py). Optional: the script falls back to its
+# own UM24C frame decoder if rdserialtool is not installed, and --simulate needs
+# neither this nor a meter.
+rdserialtool>=1.0

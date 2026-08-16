@@ -1,0 +1,5 @@
+DUMP begin n=2
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run
+DUMP,1,idle-skip,703,0,0,30012,23.42,0.0000,703
+DUMP,2,ctrl-k5,4162,833,833,300031,13.87,0.2002,4
+DUMP end

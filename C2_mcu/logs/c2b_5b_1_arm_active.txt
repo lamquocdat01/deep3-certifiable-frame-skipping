@@ -1,0 +1,6 @@
+
+===== SEND: MEASURE active 90 on-boot =====
+OK MEASURE armed mode=active secs=90 run_id=7 — power-cycle the board to run
+
+===== SEND: MEASURE status =====
+MEASURE armed mode=active secs=90 stored=3 next_run_id=7

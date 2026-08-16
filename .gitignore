@@ -1,0 +1,5 @@
+cfs-mcu/build
+cfs-mcu/managed_components
+__pycache__/
+*.pyc
+

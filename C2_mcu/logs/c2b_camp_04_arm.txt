@@ -1,0 +1,6 @@
+
+===== SEND: MEASURE gate 330 on-boot =====
+OK MEASURE armed mode=gate secs=330 run_id=12 — power-cycle the board to run
+
+===== SEND: MEASURE status =====
+MEASURE armed mode=gate secs=330 stored=3 next_run_id=12

@@ -1,0 +1,3 @@
+
+===== SEND: HELP =====
+CMDS: MODE idle|active|gate|sweep [k=N] | SET R=N THETA=F | STATS | POWER on|off|probe|scan|live [secs] | HELP

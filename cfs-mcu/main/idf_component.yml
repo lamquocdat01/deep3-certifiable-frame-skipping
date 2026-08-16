@@ -1,0 +1,7 @@
+# Managed component dependencies (pulled by `idf.py reconfigure` from the
+# Espressif component registry). Versions are pinned to ESP-IDF v5.x-compatible
+# releases; loosen if the registry lacks the exact version.
+dependencies:
+  idf: ">=5.1"
+  espressif/esp32-camera: "^2.0.0"
+  espressif/esp-tflite-micro: "^1.3.0"

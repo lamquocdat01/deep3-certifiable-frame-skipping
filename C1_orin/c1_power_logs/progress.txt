@@ -1,0 +1,2 @@
+run 18/18 : sweep_yolo26s_k2 run1 (temp=62.0)
+ALL DONE

@@ -1,0 +1,16 @@
+Connected to COM4 @ 115200
+>>> HELP
+Writing acceptance CSV -> ..\..\C2_mcu\logs\acceptance_stats.csv
+>>> MODE active
+[active] fps=13.4 open_frac=1.000 infer=217 mean_us=72677 max_us=88911 max_closed=0 person=14 noperson=-14 psram_free=8200848
+>>> SET R=10
+>>> MODE idle
+[idle_R10] fps=22.3 open_frac=0.102 infer=37 mean_us=74130 max_us=88634 max_closed=9 person=15 noperson=-15 psram_free=8200848
+>>> MODE sweep k=10
+[sweep_k10] fps=22.3 open_frac=0.102 infer=37 mean_us=74138 max_us=88729 max_closed=9 person=13 noperson=-13 psram_free=8200848
+>>> MODE sweep k=5
+[sweep_k5] fps=20.1 open_frac=0.200 infer=65 mean_us=74265 max_us=88722 max_closed=4 person=16 noperson=-16 psram_free=8200848
+>>> MODE sweep k=2
+[sweep_k2] fps=15.6 open_frac=0.502 infer=127 mean_us=73890 max_us=88599 max_closed=1 person=13 noperson=-13 psram_free=8200848
+Acceptance run complete.
+ACCEPTANCE2_DONE exit=0

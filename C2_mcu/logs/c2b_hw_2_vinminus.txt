@@ -1,0 +1,27 @@
+
+===== SEND: POWER PROBE =====
+PROBE addr=0x40 sda=1 scl=2 reg0x00=0x399F por_expect=0x399F ack=1 init_readback=0x399F
+
+===== SEND: POWER LIVE 10 =====
+LIVE start secs=10 addr=0x40 (VIN floating during step A: mV/mA/mW are NOT a measurement)
+LIVE t=0.00 bus_v=5.204 current_ma=-7.7 power_mw=4.0 raw_bus=0x28AA raw_cur=0xFFB3 raw_pow=0x0002 err=0x0
+LIVE t=0.51 bus_v=5.212 current_ma=-5.2 power_mw=10.0 raw_bus=0x28BA raw_cur=0xFFCC raw_pow=0x0005 err=0x0
+LIVE t=1.01 bus_v=5.212 current_ma=-5.6 power_mw=14.0 raw_bus=0x28BA raw_cur=0xFFC8 raw_pow=0x0007 err=0x0
+LIVE t=1.51 bus_v=5.212 current_ma=-5.9 power_mw=30.0 raw_bus=0x28BA raw_cur=0xFFC5 raw_pow=0x000F err=0x0
+LIVE t=2.01 bus_v=5.188 current_ma=-4.9 power_mw=10.0 raw_bus=0x288A raw_cur=0xFFCF raw_pow=0x0005 err=0x0
+LIVE t=2.52 bus_v=5.212 current_ma=-2.9 power_mw=30.0 raw_bus=0x28BA raw_cur=0xFFE3 raw_pow=0x000F err=0x0
+LIVE t=3.02 bus_v=5.212 current_ma=-5.2 power_mw=16.0 raw_bus=0x28BA raw_cur=0xFFCC raw_pow=0x0008 err=0x0
+LIVE t=3.52 bus_v=5.212 current_ma=-5.5 power_mw=22.0 raw_bus=0x28BA raw_cur=0xFFC9 raw_pow=0x000B err=0x0
+LIVE t=4.02 bus_v=5.212 current_ma=-5.4 power_mw=30.0 raw_bus=0x28BA raw_cur=0xFFCA raw_pow=0x000F err=0x0
+LIVE t=4.52 bus_v=5.208 current_ma=-7.0 power_mw=30.0 raw_bus=0x28B2 raw_cur=0xFFBA raw_pow=0x000F err=0x0
+LIVE t=5.03 bus_v=5.212 current_ma=-5.8 power_mw=32.0 raw_bus=0x28BA raw_cur=0xFFC6 raw_pow=0x0010 err=0x0
+LIVE t=5.53 bus_v=5.188 current_ma=-8.4 power_mw=40.0 raw_bus=0x288A raw_cur=0xFFAC raw_pow=0x0014 err=0x0
+LIVE t=6.03 bus_v=5.212 current_ma=-5.2 power_mw=26.0 raw_bus=0x28BA raw_cur=0xFFCC raw_pow=0x000D err=0x0
+LIVE t=6.53 bus_v=5.208 current_ma=-6.0 power_mw=26.0 raw_bus=0x28B2 raw_cur=0xFFC4 raw_pow=0x000D err=0x0
+LIVE t=7.03 bus_v=5.212 current_ma=-6.1 power_mw=30.0 raw_bus=0x28BA raw_cur=0xFFC3 raw_pow=0x000F err=0x0
+LIVE t=7.54 bus_v=5.212 current_ma=-5.2 power_mw=14.0 raw_bus=0x28BA raw_cur=0xFFCC raw_pow=0x0007 err=0x0
+LIVE t=8.04 bus_v=5.212 current_ma=-6.2 power_mw=16.0 raw_bus=0x28BA raw_cur=0xFFC2 raw_pow=0x0008 err=0x0
+LIVE t=8.54 bus_v=5.208 current_ma=-5.9 power_mw=32.0 raw_bus=0x28B2 raw_cur=0xFFC5 raw_pow=0x0010 err=0x0
+LIVE t=9.04 bus_v=5.192 current_ma=-2.5 power_mw=22.0 raw_bus=0x2892 raw_cur=0xFFE7 raw_pow=0x000B err=0x0
+LIVE t=9.54 bus_v=5.216 current_ma=-4.2 power_mw=30.0 raw_bus=0x28C2 raw_cur=0xFFD6 raw_pow=0x000F err=0x0
+LIVE done

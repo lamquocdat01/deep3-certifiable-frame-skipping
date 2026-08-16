@@ -1,0 +1,8 @@
+
+===== SEND: POWER PROBE =====
+PROBE addr=0x40 sda=1 scl=2 reg0x00=0x399F por_expect=0x399F ack=1 init_readback=0x399F
+
+===== SEND: POWER SCAN =====
+SCAN sda=1 scl=2 range=0x08..0x77 count=1
+SCAN found=0x40
+SCAN done

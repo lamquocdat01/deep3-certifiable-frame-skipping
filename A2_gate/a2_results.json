@@ -1,0 +1,191 @@
+{
+ "R": 5,
+ "tau": 0.55,
+ "datasets": {
+  "BMC": {
+   "n_events": 261,
+   "rho_ev": 0.9724,
+   "q_in": 0.5306,
+   "q_out": 0.0532,
+   "alignment": 0.4774,
+   "activation": 0.614,
+   "gated_miss_model": 0.123,
+   "eps_at_a": 0.1006,
+   "TargetingGain": 0.2226,
+   "ActivationCost": 0.245,
+   "beats_frontier_model": false,
+   "q_in_star_at_measured_qout": 0.798,
+   "alignment_deficit": 0.2674
+  },
+  "CDnet2014": {
+   "n_events": 2516,
+   "rho_ev": 0.7,
+   "q_in": 0.7837,
+   "q_out": 0.3641,
+   "alignment": 0.4196,
+   "activation": 0.7262,
+   "gated_miss_model": 0.0793,
+   "eps_at_a": 0.1174,
+   "TargetingGain": 0.4019,
+   "ActivationCost": 0.3638,
+   "beats_frontier_model": true,
+   "q_in_star_at_measured_qout": 0.5715,
+   "alignment_deficit": -0.2122
+  },
+  "LASIESTA": {
+   "n_events": 936,
+   "rho_ev": 0.7876,
+   "q_in": 0.6979,
+   "q_out": 0.7999,
+   "alignment": -0.1021,
+   "activation": 0.7757,
+   "gated_miss_model": 0.0529,
+   "eps_at_a": 0.0446,
+   "TargetingGain": 0.1729,
+   "ActivationCost": 0.1813,
+   "beats_frontier_model": false,
+   "q_in_star_at_measured_qout": 0.8395,
+   "alignment_deficit": 0.1416
+  },
+  "VIRAT": {
+   "n_events": 10,
+   "rho_ev": 1.0,
+   "q_in": 0.5518,
+   "q_out": NaN,
+   "alignment": NaN,
+   "activation": NaN,
+   "gated_miss_model": 0.0,
+   "eps_at_a": NaN,
+   "TargetingGain": 0.0,
+   "ActivationCost": NaN,
+   "beats_frontier_model": false,
+   "q_in_star_at_measured_qout": null,
+   "alignment_deficit": null
+  }
+ },
+ "pooled": {
+  "rho_ev": 0.7657,
+  "q_in": 0.7092,
+  "q_out": 0.4002,
+  "activation": 0.7095,
+  "gated_miss_model": 0.0914,
+  "eps_at_a": 0.104,
+  "TargetingGain": 0.3148,
+  "ActivationCost": 0.3022
+ },
+ "threshold_curve_pooled": [
+  {
+   "q_out": 0.0,
+   "q_in_star": 0.0
+  },
+  {
+   "q_out": 0.05,
+   "q_in_star": 0.475
+  },
+  {
+   "q_out": 0.1,
+   "q_in_star": 0.494
+  },
+  {
+   "q_out": 0.15,
+   "q_in_star": 0.513
+  },
+  {
+   "q_out": 0.2,
+   "q_in_star": 0.532
+  },
+  {
+   "q_out": 0.25,
+   "q_in_star": 0.552
+  },
+  {
+   "q_out": 0.3,
+   "q_in_star": 0.573
+  },
+  {
+   "q_out": 0.35,
+   "q_in_star": 0.595
+  },
+  {
+   "q_out": 0.4,
+   "q_in_star": 0.617
+  },
+  {
+   "q_out": 0.45,
+   "q_in_star": 0.64
+  },
+  {
+   "q_out": 0.5,
+   "q_in_star": 0.665
+  },
+  {
+   "q_out": 0.55,
+   "q_in_star": 0.69
+  },
+  {
+   "q_out": 0.6,
+   "q_in_star": 0.716
+  },
+  {
+   "q_out": 0.65,
+   "q_in_star": 0.744
+  },
+  {
+   "q_out": 0.7,
+   "q_in_star": 0.773
+  },
+  {
+   "q_out": 0.75,
+   "q_in_star": 0.804
+  },
+  {
+   "q_out": 0.8,
+   "q_in_star": 0.837
+  },
+  {
+   "q_out": 0.85,
+   "q_in_star": 0.873
+  },
+  {
+   "q_out": 0.9,
+   "q_in_star": 0.911
+  }
+ ],
+ "tau_sweep_at_deployed_theta": [
+  {
+   "dataset": "CDnet2014",
+   "a": 0.72676,
+   "gated_miss": 0.10334,
+   "eps": 0.11718,
+   "ratio": 1.1339
+  },
+  {
+   "dataset": "BMC",
+   "a": 0.61572,
+   "gated_miss": 0.35249,
+   "eps": 0.10012,
+   "ratio": 0.284
+  },
+  {
+   "dataset": "LASIESTA",
+   "a": 0.78475,
+   "gated_miss": 0.01282,
+   "eps": 0.04277,
+   "ratio": 3.3364
+  },
+  {
+   "dataset": "VIRAT",
+   "a": 0.6448,
+   "gated_miss": 0.0,
+   "eps": 0.0,
+   "ratio": Infinity
+  },
+  {
+   "dataset": "ALL",
+   "a": 0.71119,
+   "gated_miss": 0.09777,
+   "eps": 0.10341,
+   "ratio": 1.0576
+  }
+ ]
+}

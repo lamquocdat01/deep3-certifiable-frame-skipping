@@ -1,0 +1,189 @@
+{
+ "R": 5,
+ "gaps": {
+  "count": 3592,
+  "frac_len1": 0.5356,
+  "frac_len_le3": 0.7545,
+  "median": 1.0
+ },
+ "p_by_G": {
+  "1": 0.9856,
+  "2": 0.9778,
+  "3": 0.9722,
+  "5": 0.965
+ },
+ "p_hat": 0.9722,
+ "composed_miss": {
+  "1.0": 0.4062,
+  "0.99": 0.4089,
+  "0.95": 0.4197,
+  "0.9": 0.4341,
+  "0.972": 0.4137,
+  "0.8": 0.4658
+ },
+ "miss_p1_check": 0.4062,
+ "reliability_adjusted_certification": [
+  {
+   "eta": 0.05,
+   "p": 0.99,
+   "k": 1,
+   "D_target": 5,
+   "activation": 0.2,
+   "energy_mJ": 82.5,
+   "energy_p1_mJ": 82.5
+  },
+  {
+   "eta": 0.05,
+   "p": 0.99,
+   "k": 1,
+   "D_target": 10,
+   "activation": 0.1,
+   "energy_mJ": 56.4,
+   "energy_p1_mJ": 56.4
+  },
+  {
+   "eta": 0.05,
+   "p": 0.99,
+   "k": 1,
+   "D_target": 25,
+   "activation": 0.04,
+   "energy_mJ": 40.8,
+   "energy_p1_mJ": 40.8
+  },
+  {
+   "eta": 0.05,
+   "p": 0.95,
+   "k": 2,
+   "D_target": 5,
+   "activation": 0.4,
+   "energy_mJ": 134.6,
+   "energy_p1_mJ": 82.5
+  },
+  {
+   "eta": 0.05,
+   "p": 0.95,
+   "k": 2,
+   "D_target": 10,
+   "activation": 0.2,
+   "energy_mJ": 82.5,
+   "energy_p1_mJ": 56.4
+  },
+  {
+   "eta": 0.05,
+   "p": 0.95,
+   "k": 2,
+   "D_target": 25,
+   "activation": 0.08,
+   "energy_mJ": 51.2,
+   "energy_p1_mJ": 40.8
+  },
+  {
+   "eta": 0.05,
+   "p": 0.972,
+   "k": 1,
+   "D_target": 5,
+   "activation": 0.2,
+   "energy_mJ": 82.5,
+   "energy_p1_mJ": 82.5
+  },
+  {
+   "eta": 0.05,
+   "p": 0.972,
+   "k": 1,
+   "D_target": 10,
+   "activation": 0.1,
+   "energy_mJ": 56.4,
+   "energy_p1_mJ": 56.4
+  },
+  {
+   "eta": 0.05,
+   "p": 0.972,
+   "k": 1,
+   "D_target": 25,
+   "activation": 0.04,
+   "energy_mJ": 40.8,
+   "energy_p1_mJ": 40.8
+  },
+  {
+   "eta": 0.01,
+   "p": 0.99,
+   "k": 1,
+   "D_target": 5,
+   "activation": 0.2,
+   "energy_mJ": 82.5,
+   "energy_p1_mJ": 82.5
+  },
+  {
+   "eta": 0.01,
+   "p": 0.99,
+   "k": 1,
+   "D_target": 10,
+   "activation": 0.1,
+   "energy_mJ": 56.4,
+   "energy_p1_mJ": 56.4
+  },
+  {
+   "eta": 0.01,
+   "p": 0.99,
+   "k": 1,
+   "D_target": 25,
+   "activation": 0.04,
+   "energy_mJ": 40.8,
+   "energy_p1_mJ": 40.8
+  },
+  {
+   "eta": 0.01,
+   "p": 0.95,
+   "k": 2,
+   "D_target": 5,
+   "activation": 0.4,
+   "energy_mJ": 134.6,
+   "energy_p1_mJ": 82.5
+  },
+  {
+   "eta": 0.01,
+   "p": 0.95,
+   "k": 2,
+   "D_target": 10,
+   "activation": 0.2,
+   "energy_mJ": 82.5,
+   "energy_p1_mJ": 56.4
+  },
+  {
+   "eta": 0.01,
+   "p": 0.95,
+   "k": 2,
+   "D_target": 25,
+   "activation": 0.08,
+   "energy_mJ": 51.2,
+   "energy_p1_mJ": 40.8
+  },
+  {
+   "eta": 0.01,
+   "p": 0.972,
+   "k": 2,
+   "D_target": 5,
+   "activation": 0.4,
+   "energy_mJ": 134.6,
+   "energy_p1_mJ": 82.5
+  },
+  {
+   "eta": 0.01,
+   "p": 0.972,
+   "k": 2,
+   "D_target": 10,
+   "activation": 0.2,
+   "energy_mJ": 82.5,
+   "energy_p1_mJ": 56.4
+  },
+  {
+   "eta": 0.01,
+   "p": 0.972,
+   "k": 2,
+   "D_target": 25,
+   "activation": 0.08,
+   "energy_mJ": 51.2,
+   "energy_p1_mJ": 40.8
+  }
+ ]
+}

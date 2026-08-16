@@ -1,0 +1,167 @@
+[14:35:47] START orchestrator, 18 runs
+[14:35:47] gate OK temp=59.3<=60.0
+[14:35:47] RUN 1/18 static run1 starting (est 190s)
+[14:38:57] DONE static run1: W=4.446+-0.075 fps=19.97 infer_fps=0.00 temp 59.1->58.3
+[14:38:57] gate OK temp=58.3<=60.0
+[14:38:57] RUN 2/18 static run2 starting (est 190s)
+[14:42:08] DONE static run2: W=4.444+-0.069 fps=19.95 infer_fps=0.00 temp 58.4->58.4
+[14:42:08] gate OK temp=58.5<=60.0
+[14:42:08] RUN 3/18 static run3 starting (est 190s)
+[14:45:19] DONE static run3: W=4.449+-0.094 fps=19.96 infer_fps=0.00 temp 58.6->58.8
+[14:45:19] gate OK temp=58.7<=60.0
+[14:45:19] RUN 4/18 idle_yolo26s run1 starting (est 360s)
+[14:51:20] DONE idle_yolo26s run1: W=4.890+-0.085 fps=30.00 infer_fps=0.00 temp 59.0->59.3
+[14:51:20] gate OK temp=59.3<=60.0
+[14:51:20] RUN 5/18 idle_yolo26s run2 starting (est 360s)
+[14:57:21] DONE idle_yolo26s run2: W=4.895+-0.076 fps=30.00 infer_fps=0.00 temp 59.3->59.5
+[14:57:21] gate OK temp=59.4<=60.0
+[14:57:21] RUN 6/18 idle_yolo26s run3 starting (est 360s)
+[15:03:21] DONE idle_yolo26s run3: W=4.891+-0.085 fps=30.00 infer_fps=0.00 temp 59.5->59.3
+[15:03:21] gate OK temp=59.4<=60.0
+[15:03:21] RUN 7/18 idle_yolov3 run1 starting (est 360s)
+[15:09:22] DONE idle_yolov3 run1: W=4.638+-0.090 fps=30.00 infer_fps=0.00 temp 59.0->58.4
+[15:09:22] gate OK temp=58.5<=60.0
+[15:09:22] RUN 8/18 idle_yolov3 run2 starting (est 360s)
+[15:15:23] DONE idle_yolov3 run2: W=4.629+-0.082 fps=30.00 infer_fps=0.00 temp 58.4->58.4
+[15:15:23] gate OK temp=58.5<=60.0
+[15:15:23] RUN 9/18 idle_yolov3 run3 starting (est 360s)
+[15:21:24] DONE idle_yolov3 run3: W=4.635+-0.085 fps=30.00 infer_fps=0.00 temp 58.5->58.7
+[15:21:24] gate OK temp=58.7<=60.0
+[15:21:24] RUN 10/18 active_yolo26s run1 starting (est 360s)
+[15:27:26] DONE active_yolo26s run1: W=8.725+-0.119 fps=17.26 infer_fps=17.26 temp 61.9->65.2
+[15:27:26] cooldown temp=64.9>60.0, wait 15s
+[15:27:41] cooldown temp=64.1>60.0, wait 15s
+[15:27:56] cooldown temp=63.2>60.0, wait 15s
+[15:28:11] cooldown temp=62.9>60.0, wait 15s
+[15:28:26] cooldown temp=62.2>60.0, wait 15s
+[15:28:41] cooldown temp=61.8>60.0, wait 15s
+[15:28:56] cooldown temp=61.3>60.0, wait 15s
+[15:29:11] cooldown temp=61.2>60.0, wait 15s
+[15:29:26] cooldown temp=60.9>60.0, wait 15s
+[15:29:41] cooldown temp=60.8>60.0, wait 15s
+[15:29:56] cooldown temp=60.4>60.0, wait 15s
+[15:30:11] cooldown temp=60.3>60.0, wait 15s
+[15:30:26] cooldown temp=60.0>60.0, wait 15s
+[15:30:41] gate OK temp=60.0<=60.0
+[15:30:41] RUN 11/18 active_yolo26s run2 starting (est 360s)
+[15:36:43] DONE active_yolo26s run2: W=8.877+-0.102 fps=17.99 infer_fps=17.99 temp 62.9->65.8
+[15:36:43] cooldown temp=65.4>60.0, wait 15s
+[15:36:58] cooldown temp=64.5>60.0, wait 15s
+[15:37:13] cooldown temp=63.8>60.0, wait 15s
+[15:37:28] cooldown temp=63.0>60.0, wait 15s
+[15:37:43] cooldown temp=62.5>60.0, wait 15s
+[15:37:58] cooldown temp=62.1>60.0, wait 15s
+[15:38:13] cooldown temp=61.8>60.0, wait 15s
+[15:38:28] cooldown temp=61.3>60.0, wait 15s
+[15:38:43] cooldown temp=61.1>60.0, wait 15s
+[15:38:58] cooldown temp=61.0>60.0, wait 15s
+[15:39:13] cooldown temp=60.9>60.0, wait 15s
+[15:39:28] cooldown temp=60.4>60.0, wait 15s
+[15:39:44] cooldown temp=60.3>60.0, wait 15s
+[15:39:59] cooldown temp=60.3>60.0, wait 15s
+[15:40:14] cooldown temp=60.3>60.0, wait 15s
+[15:40:29] gate OK temp=59.9<=60.0
+[15:40:29] RUN 12/18 active_yolo26s run3 starting (est 360s)
+[15:46:31] DONE active_yolo26s run3: W=8.784+-0.089 fps=17.57 infer_fps=17.57 temp 62.8->65.4
+[15:46:31] cooldown temp=65.2>60.0, wait 15s
+[15:46:46] cooldown temp=64.3>60.0, wait 15s
+[15:47:01] cooldown temp=63.8>60.0, wait 15s
+[15:47:16] cooldown temp=63.0>60.0, wait 15s
+[15:47:31] cooldown temp=62.5>60.0, wait 15s
+[15:47:46] cooldown temp=62.1>60.0, wait 15s
+[15:48:01] cooldown temp=61.8>60.0, wait 15s
+[15:48:16] cooldown temp=61.3>60.0, wait 15s
+[15:48:31] cooldown temp=61.0>60.0, wait 15s
+[15:48:46] cooldown temp=60.8>60.0, wait 15s
+[15:49:01] cooldown temp=60.6>60.0, wait 15s
+[15:49:16] cooldown temp=60.3>60.0, wait 15s
+[15:49:31] cooldown temp=60.2>60.0, wait 15s
+[15:49:46] cooldown temp=60.2>60.0, wait 15s
+[15:50:01] gate OK temp=60.0<=60.0
+[15:50:01] RUN 13/18 active_yolov3 run1 starting (est 360s)
+[15:56:04] DONE active_yolov3 run1: W=11.020+-0.126 fps=7.88 infer_fps=7.88 temp 64.8->69.2
+[15:56:04] cooldown temp=68.2>60.0, wait 15s
+[15:56:19] cooldown temp=67.0>60.0, wait 15s
+[15:56:34] cooldown temp=65.8>60.0, wait 15s
+[15:56:49] cooldown temp=65.1>60.0, wait 15s
+[15:57:04] cooldown temp=64.2>60.0, wait 15s
+[15:57:19] cooldown temp=63.8>60.0, wait 15s
+[15:57:34] cooldown temp=63.1>60.0, wait 15s
+[15:57:49] cooldown temp=62.8>60.0, wait 15s
+[15:58:04] cooldown temp=62.3>60.0, wait 15s
+[15:58:19] cooldown temp=61.8>60.0, wait 15s
+[15:58:34] cooldown temp=61.6>60.0, wait 15s
+[15:58:49] cooldown temp=61.3>60.0, wait 15s
+[15:59:04] cooldown temp=61.0>60.0, wait 15s
+[15:59:19] cooldown temp=60.8>60.0, wait 15s
+[15:59:34] cooldown temp=60.7>60.0, wait 15s
+[15:59:49] cooldown temp=60.5>60.0, wait 15s
+[16:00:04] cooldown temp=60.3>60.0, wait 15s
+[16:00:19] cooldown temp=60.2>60.0, wait 15s
+[16:00:34] cooldown temp=60.2>60.0, wait 15s
+[16:00:49] cooldown temp=60.1>60.0, wait 15s
+[16:01:04] gate OK temp=59.9<=60.0
+[16:01:04] RUN 14/18 active_yolov3 run2 starting (est 360s)
+[16:07:06] DONE active_yolov3 run2: W=11.005+-0.119 fps=7.86 infer_fps=7.86 temp 64.8->69.1
+[16:07:06] cooldown temp=68.2>60.0, wait 15s
+[16:07:21] cooldown temp=67.0>60.0, wait 15s
+[16:07:36] cooldown temp=65.7>60.0, wait 15s
+[16:07:51] cooldown temp=64.9>60.0, wait 15s
+[16:08:06] cooldown temp=64.1>60.0, wait 15s
+[16:08:21] cooldown temp=63.4>60.0, wait 15s
+[16:08:36] cooldown temp=63.0>60.0, wait 15s
+[16:08:51] cooldown temp=62.6>60.0, wait 15s
+[16:09:07] cooldown temp=62.1>60.0, wait 15s
+[16:09:22] cooldown temp=61.6>60.0, wait 15s
+[16:09:37] cooldown temp=61.4>60.0, wait 15s
+[16:09:52] cooldown temp=61.1>60.0, wait 15s
+[16:10:07] cooldown temp=60.9>60.0, wait 15s
+[16:10:22] cooldown temp=60.6>60.0, wait 15s
+[16:10:37] cooldown temp=60.4>60.0, wait 15s
+[16:10:52] cooldown temp=60.4>60.0, wait 15s
+[16:11:07] cooldown temp=60.3>60.0, wait 15s
+[16:11:22] gate OK temp=60.0<=60.0
+[16:11:22] RUN 15/18 active_yolov3 run3 starting (est 360s)
+[16:17:24] DONE active_yolov3 run3: W=11.012+-0.113 fps=7.87 infer_fps=7.87 temp 64.9->69.3
+[16:17:24] cooldown temp=68.3>60.0, wait 15s
+[16:17:39] cooldown temp=67.2>60.0, wait 15s
+[16:17:54] cooldown temp=66.0>60.0, wait 15s
+[16:18:09] cooldown temp=65.2>60.0, wait 15s
+[16:18:24] cooldown temp=64.3>60.0, wait 15s
+[16:18:40] cooldown temp=63.7>60.0, wait 15s
+[16:18:55] cooldown temp=63.2>60.0, wait 15s
+[16:19:10] cooldown temp=62.9>60.0, wait 15s
+[16:19:25] cooldown temp=62.5>60.0, wait 15s
+[16:19:40] cooldown temp=62.1>60.0, wait 15s
+[16:19:55] cooldown temp=61.8>60.0, wait 15s
+[16:20:10] cooldown temp=61.5>60.0, wait 15s
+[16:20:25] cooldown temp=61.2>60.0, wait 15s
+[16:20:40] cooldown temp=61.2>60.0, wait 15s
+[16:20:55] cooldown temp=60.8>60.0, wait 15s
+[16:21:10] cooldown temp=60.6>60.0, wait 15s
+[16:21:25] cooldown temp=60.4>60.0, wait 15s
+[16:21:40] cooldown temp=60.4>60.0, wait 15s
+[16:21:55] cooldown temp=60.2>60.0, wait 15s
+[16:22:10] cooldown temp=60.1>60.0, wait 15s
+[16:22:25] gate OK temp=60.0<=60.0
+[16:22:25] RUN 16/18 sweep_yolo26s_k10 run1 starting (est 360s)
+[16:28:27] DONE sweep_yolo26s_k10 run1: W=5.641+-0.155 fps=30.00 infer_fps=3.00 temp 60.6->61.1
+[16:28:27] cooldown temp=60.9>60.0, wait 15s
+[16:28:42] cooldown temp=60.7>60.0, wait 15s
+[16:28:57] cooldown temp=60.4>60.0, wait 15s
+[16:29:12] cooldown temp=60.3>60.0, wait 15s
+[16:29:27] cooldown temp=60.1>60.0, wait 15s
+[16:29:42] gate OK temp=59.9<=60.0
+[16:29:42] RUN 17/18 sweep_yolo26s_k5 run1 starting (est 360s)
+[16:35:44] DONE sweep_yolo26s_k5 run1: W=6.382+-0.107 fps=30.00 infer_fps=6.00 temp 60.9->62.0
+[16:35:44] cooldown temp=62.0>60.0, wait 15s
+[16:35:59] cooldown temp=61.8>60.0, wait 15s
+[16:36:14] cooldown temp=61.2>60.0, wait 15s
+[16:36:29] cooldown temp=60.9>60.0, wait 15s
+[16:36:44] cooldown temp=60.5>60.0, wait 15s
+[16:36:59] cooldown temp=60.3>60.0, wait 15s
+[16:37:14] cooldown temp=60.2>60.0, wait 15s
+[16:37:29] gate OK temp=59.9<=60.0
+[16:37:29] RUN 18/18 sweep_yolo26s_k2 run1 starting (est 360s)
+[16:43:31] DONE sweep_yolo26s_k2 run1: W=8.369+-0.103 fps=30.00 infer_fps=15.00 temp 62.3->65.1
+[16:43:31] ALL DONE

@@ -1,0 +1,15 @@
+
+===== SEND: DUMP =====
+DUMP begin n=4
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run,mean_mw,mean_v,mean_ma,power_samples
+DUMP,4,idle-skip,750,0,0,30020,24.98,0.0000,750,0.00,0.0000,0.00,0
+DUMPWARN,run_id=4,no_power_data,run_not_longer_than_warmup_or_sensor_absent
+DUMP,5,active,416,416,416,30011,13.86,1.0000,0,0.00,0.0000,0.00,0
+DUMPWARN,run_id=5,no_power_data,run_not_longer_than_warmup_or_sensor_absent
+DUMP,6,ctrl-k5,625,125,125,30020,20.82,0.2000,4,0.00,0.0000,0.00,0
+DUMPWARN,run_id=6,no_power_data,run_not_longer_than_warmup_or_sensor_absent
+DUMP,7,active,1249,1249,1249,90012,13.88,1.0000,0,662.58,4.8396,136.87,426
+DUMP end
+
+===== SEND: STATS =====
+STATS {"mode":"idle","R":10,"theta":8.00,"sweep_k":10,"fps":22.14,"open_frac":0.1000,"frames":510,"opens":51,"infer_count":51,"infer_us_mean":71860.1,"infer_us_max":117282,"max_closed_run":9,"person":-41,"noperson":41,"heap_free":8500495,"psram_free":8199688,"power_on":0,"ina219":1,"power_mw_mean":0.00,"power_samples":0,"infer_enabled":1,"parked":0,"meas_running":0,"stored_runs":4}

@@ -1,0 +1,504 @@
+{
+ "q_in": 0.7154,
+ "q_out": 0.4002,
+ "densities": [
+  {
+   "rho_target": "native",
+   "rho_actual": 0.7587,
+   "frames": 166589,
+   "curve": [
+    {
+     "theta": 0.35,
+     "a": 0.7803,
+     "miss": 0.0714,
+     "eps": 0.0789,
+     "advantage": 1.105
+    },
+    {
+     "theta": 0.45,
+     "a": 0.7452,
+     "miss": 0.0856,
+     "eps": 0.0915,
+     "advantage": 1.068
+    },
+    {
+     "theta": 0.5,
+     "a": 0.7279,
+     "miss": 0.0862,
+     "eps": 0.0977,
+     "advantage": 1.134
+    },
+    {
+     "theta": 0.54,
+     "a": 0.7142,
+     "miss": 0.0953,
+     "eps": 0.1026,
+     "advantage": 1.076
+    },
+    {
+     "theta": 0.55,
+     "a": 0.7078,
+     "miss": 0.0964,
+     "eps": 0.1049,
+     "advantage": 1.088
+    },
+    {
+     "theta": 0.57,
+     "a": 0.6992,
+     "miss": 0.1045,
+     "eps": 0.108,
+     "advantage": 1.033
+    },
+    {
+     "theta": 0.6,
+     "a": 0.6724,
+     "miss": 0.1163,
+     "eps": 0.1176,
+     "advantage": 1.011
+    },
+    {
+     "theta": 0.7,
+     "a": 0.6215,
+     "miss": 0.1325,
+     "eps": 0.1359,
+     "advantage": 1.026
+    },
+    {
+     "theta": 0.85,
+     "a": 0.1999,
+     "miss": 0.4032,
+     "eps": 0.4075,
+     "advantage": 1.011
+    }
+   ],
+   "deployed_theta": {
+    "theta": 0.55,
+    "a": 0.7078,
+    "miss": 0.0964,
+    "eps": 0.1049,
+    "advantage": 1.088
+   },
+   "model": {
+    "a_pred": 0.7115,
+    "eps_at_a_pred": 0.1036,
+    "Pg_pred": 0.0895,
+    "advantage_pred": 1.157
+   }
+  },
+  {
+   "rho_target": 0.5,
+   "rho_actual": 0.481,
+   "frames": 262787,
+   "curve": [
+    {
+     "theta": 0.35,
+     "a": 0.7003,
+     "miss": 0.0714,
+     "eps": 0.1076,
+     "advantage": 1.507
+    },
+    {
+     "theta": 0.45,
+     "a": 0.6696,
+     "miss": 0.0846,
+     "eps": 0.1186,
+     "advantage": 1.403
+    },
+    {
+     "theta": 0.5,
+     "a": 0.6519,
+     "miss": 0.087,
+     "eps": 0.125,
+     "advantage": 1.436
+    },
+    {
+     "theta": 0.54,
+     "a": 0.6388,
+     "miss": 0.0951,
+     "eps": 0.1297,
+     "advantage": 1.364
+    },
+    {
+     "theta": 0.55,
+     "a": 0.6312,
+     "miss": 0.097,
+     "eps": 0.1324,
+     "advantage": 1.366
+    },
+    {
+     "theta": 0.57,
+     "a": 0.6219,
+     "miss": 0.1042,
+     "eps": 0.1357,
+     "advantage": 1.302
+    },
+    {
+     "theta": 0.6,
+     "a": 0.5876,
+     "miss": 0.1163,
+     "eps": 0.1481,
+     "advantage": 1.273
+    },
+    {
+     "theta": 0.7,
+     "a": 0.549,
+     "miss": 0.1336,
+     "eps": 0.1619,
+     "advantage": 1.212
+    },
+    {
+     "theta": 0.85,
+     "a": 0.1999,
+     "miss": 0.4059,
+     "eps": 0.4075,
+     "advantage": 1.004
+    }
+   ],
+   "deployed_theta": {
+    "theta": 0.55,
+    "a": 0.6312,
+    "miss": 0.097,
+    "eps": 0.1324,
+    "advantage": 1.366
+   },
+   "model": {
+    "a_pred": 0.6414,
+    "eps_at_a_pred": 0.1287,
+    "Pg_pred": 0.0895,
+    "advantage_pred": 1.438
+   }
+  },
+  {
+   "rho_target": 0.25,
+   "rho_actual": 0.2632,
+   "frames": 480213,
+   "curve": [
+    {
+     "theta": 0.35,
+     "a": 0.6241,
+     "miss": 0.0684,
+     "eps": 0.1349,
+     "advantage": 1.973
+    },
+    {
+     "theta": 0.45,
+     "a": 0.5974,
+     "miss": 0.0827,
+     "eps": 0.1445,
+     "advantage": 1.748
+    },
+    {
+     "theta": 0.5,
+     "a": 0.5811,
+     "miss": 0.0881,
+     "eps": 0.1504,
+     "advantage": 1.707
+    },
+    {
+     "theta": 0.54,
+     "a": 0.5691,
+     "miss": 0.0961,
+     "eps": 0.1547,
+     "advantage": 1.609
+    },
+    {
+     "theta": 0.55,
+     "a": 0.5607,
+     "miss": 0.0983,
+     "eps": 0.1577,
+     "advantage": 1.604
+    },
+    {
+     "theta": 0.57,
+     "a": 0.5509,
+     "miss": 0.1034,
+     "eps": 0.1612,
+     "advantage": 1.559
+    },
+    {
+     "theta": 0.6,
+     "a": 0.5116,
+     "miss": 0.1137,
+     "eps": 0.1754,
+     "advantage": 1.543
+    },
+    {
+     "theta": 0.7,
+     "a": 0.4826,
+     "miss": 0.1341,
+     "eps": 0.1909,
+     "advantage": 1.423
+    },
+    {
+     "theta": 0.85,
+     "a": 0.1999,
+     "miss": 0.4045,
+     "eps": 0.4074,
+     "advantage": 1.007
+    }
+   ],
+   "deployed_theta": {
+    "theta": 0.55,
+    "a": 0.5607,
+    "miss": 0.0983,
+    "eps": 0.1577,
+    "advantage": 1.604
+   },
+   "model": {
+    "a_pred": 0.5865,
+    "eps_at_a_pred": 0.1484,
+    "Pg_pred": 0.0895,
+    "advantage_pred": 1.658
+   }
+  },
+  {
+   "rho_target": 0.1,
+   "rho_actual": 0.1097,
+   "frames": 1152184,
+   "curve": [
+    {
+     "theta": 0.35,
+     "a": 0.5753,
+     "miss": 0.0703,
+     "eps": 0.1525,
+     "advantage": 2.169
+    },
+    {
+     "theta": 0.45,
+     "a": 0.5514,
+     "miss": 0.0856,
+     "eps": 0.1611,
+     "advantage": 1.881
+    },
+    {
+     "theta": 0.5,
+     "a": 0.5339,
+     "miss": 0.09,
+     "eps": 0.1673,
+     "advantage": 1.86
+    },
+    {
+     "theta": 0.54,
+     "a": 0.5217,
+     "miss": 0.1002,
+     "eps": 0.1717,
+     "advantage": 1.714
+    },
+    {
+     "theta": 0.55,
+     "a": 0.5127,
+     "miss": 0.101,
+     "eps": 0.175,
+     "advantage": 1.732
+    },
+    {
+     "theta": 0.57,
+     "a": 0.5024,
+     "miss": 0.1075,
+     "eps": 0.1787,
+     "advantage": 1.663
+    },
+    {
+     "theta": 0.6,
+     "a": 0.4585,
+     "miss": 0.1182,
+     "eps": 0.2068,
+     "advantage": 1.749
+    },
+    {
+     "theta": 0.7,
+     "a": 0.4352,
+     "miss": 0.1333,
+     "eps": 0.2221,
+     "advantage": 1.666
+    },
+    {
+     "theta": 0.85,
+     "a": 0.2,
+     "miss": 0.3981,
+     "eps": 0.4073,
+     "advantage": 1.023
+    }
+   ],
+   "deployed_theta": {
+    "theta": 0.55,
+    "a": 0.5127,
+    "miss": 0.101,
+    "eps": 0.175,
+    "advantage": 1.732
+   },
+   "model": {
+    "a_pred": 0.5478,
+    "eps_at_a_pred": 0.1623,
+    "Pg_pred": 0.0895,
+    "advantage_pred": 1.813
+   }
+  },
+  {
+   "rho_target": 0.05,
+   "rho_actual": 0.0554,
+   "frames": 2280065,
+   "curve": [
+    {
+     "theta": 0.35,
+     "a": 0.5605,
+     "miss": 0.0724,
+     "eps": 0.1578,
+     "advantage": 2.178
+    },
+    {
+     "theta": 0.45,
+     "a": 0.5364,
+     "miss": 0.0886,
+     "eps": 0.1664,
+     "advantage": 1.878
+    },
+    {
+     "theta": 0.5,
+     "a": 0.5186,
+     "miss": 0.0921,
+     "eps": 0.1728,
+     "advantage": 1.876
+    },
+    {
+     "theta": 0.54,
+     "a": 0.5058,
+     "miss": 0.0999,
+     "eps": 0.1774,
+     "advantage": 1.776
+    },
+    {
+     "theta": 0.55,
+     "a": 0.4964,
+     "miss": 0.1021,
+     "eps": 0.1819,
+     "advantage": 1.782
+    },
+    {
+     "theta": 0.57,
+     "a": 0.4859,
+     "miss": 0.1061,
+     "eps": 0.1887,
+     "advantage": 1.779
+    },
+    {
+     "theta": 0.6,
+     "a": 0.4406,
+     "miss": 0.1193,
+     "eps": 0.2186,
+     "advantage": 1.832
+    },
+    {
+     "theta": 0.7,
+     "a": 0.42,
+     "miss": 0.1357,
+     "eps": 0.2321,
+     "advantage": 1.71
+    },
+    {
+     "theta": 0.85,
+     "a": 0.2,
+     "miss": 0.4016,
+     "eps": 0.4073,
+     "advantage": 1.014
+    }
+   ],
+   "deployed_theta": {
+    "theta": 0.55,
+    "a": 0.4964,
+    "miss": 0.1021,
+    "eps": 0.1819,
+    "advantage": 1.782
+   },
+   "model": {
+    "a_pred": 0.5341,
+    "eps_at_a_pred": 0.1673,
+    "Pg_pred": 0.0895,
+    "advantage_pred": 1.868
+   }
+  },
+  {
+   "rho_target": 0.01,
+   "rho_actual": 0.0112,
+   "frames": 11315924,
+   "curve": [
+    {
+     "theta": 0.35,
+     "a": 0.5487,
+     "miss": 0.0746,
+     "eps": 0.162,
+     "advantage": 2.172
+    },
+    {
+     "theta": 0.45,
+     "a": 0.5256,
+     "miss": 0.0908,
+     "eps": 0.1703,
+     "advantage": 1.877
+    },
+    {
+     "theta": 0.5,
+     "a": 0.5079,
+     "miss": 0.0913,
+     "eps": 0.1767,
+     "advantage": 1.935
+    },
+    {
+     "theta": 0.54,
+     "a": 0.4957,
+     "miss": 0.0996,
+     "eps": 0.1823,
+     "advantage": 1.83
+    },
+    {
+     "theta": 0.55,
+     "a": 0.4859,
+     "miss": 0.1018,
+     "eps": 0.1888,
+     "advantage": 1.854
+    },
+    {
+     "theta": 0.57,
+     "a": 0.4754,
+     "miss": 0.1067,
+     "eps": 0.1957,
+     "advantage": 1.835
+    },
+    {
+     "theta": 0.6,
+     "a": 0.4267,
+     "miss": 0.1201,
+     "eps": 0.2277,
+     "advantage": 1.895
+    },
+    {
+     "theta": 0.7,
+     "a": 0.408,
+     "miss": 0.1306,
+     "eps": 0.2399,
+     "advantage": 1.837
+    },
+    {
+     "theta": 0.85,
+     "a": 0.2,
+     "miss": 0.4059,
+     "eps": 0.4073,
+     "advantage": 1.004
+    }
+   ],
+   "deployed_theta": {
+    "theta": 0.55,
+    "a": 0.4859,
+    "miss": 0.1018,
+    "eps": 0.1888,
+    "advantage": 1.854
+   },
+   "model": {
+    "a_pred": 0.5229,
+    "eps_at_a_pred": 0.1713,
+    "Pg_pred": 0.0895,
+    "advantage_pred": 1.913
+   }
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+
+===== SEND: STATS =====
+STATS {"mode":"idle","R":10,"theta":8.00,"sweep_k":10,"fps":22.49,"open_frac":0.1007,"frames":1192,"opens":120,"infer_count":120,"infer_us_mean":70803.1,"infer_us_max":70862,"max_closed_run":9,"person":-4,"noperson":4,"heap_free":8500775,"psram_free":8199688,"power_on":0,"ina219":1,"power_mw_mean":0.00,"power_samples":0,"infer_enabled":1,"parked":0,"meas_running":0,"stored_runs":0}
+
+===== SEND: HELP =====
+CMDS: MODE idle|active|gate|sweep|idle-skip [k=N] | SET R=N THETA=F | STATS | POWER on|off|probe|scan|live [secs] | HELP
+C2b: MEASURE <idle-skip|gate|active|ctrl-k10|ctrl-k5|ctrl-k2> <seconds> on-boot | MEASURE off | MEASURE status | DUMP | CLEAR

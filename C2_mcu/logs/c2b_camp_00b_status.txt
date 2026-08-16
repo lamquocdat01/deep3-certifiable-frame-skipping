@@ -1,0 +1,3 @@
+
+===== SEND: MEASURE status =====
+MEASURE armed mode=idle-skip secs=330 stored=0 next_run_id=9

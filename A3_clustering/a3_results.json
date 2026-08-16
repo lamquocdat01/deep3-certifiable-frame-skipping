@@ -1,0 +1,49 @@
+{
+ "R": 5,
+ "delta": 0.05,
+ "p_formula": 0.4062,
+ "p_simulated": 0.4088,
+ "miss_autocorr": {
+  "1": 0.0599,
+  "2": 0.0309,
+  "3": -0.0125,
+  "4": 0.0065,
+  "5": -0.0125,
+  "6": -0.0212,
+  "7": -0.0312,
+  "8": -0.018,
+  "9": -0.0248,
+  "10": -0.0127
+ },
+ "duration_autocorr_log": {
+  "1": 0.1979,
+  "2": 0.0814,
+  "3": 0.041,
+  "4": 0.0238,
+  "5": 0.0231,
+  "6": -0.0146,
+  "7": -0.0014,
+  "8": -0.013,
+  "9": -0.0137,
+  "10": -0.0037
+ },
+ "clumping_ratio_median": 0.343,
+ "clumping_ratio_q90": 4.051,
+ "m_eff": 2,
+ "coverage_independent_hoeffding": {
+  "coverage": 0.88,
+  "videos": 75
+ },
+ "coverage_m_dependent": {
+  "m": 2,
+  "coverage": 0.92
+ },
+ "coverage_m5": 0.9733,
+ "fleet": {
+  "events": 3723,
+  "missed": 1522,
+  "expected": 1512.4,
+  "budget_95": 2270.0,
+  "within_budget": true
+ }
+}

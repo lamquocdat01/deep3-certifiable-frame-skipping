@@ -1,0 +1,514 @@
+
+--- reboot (DTR/RTS reset) ---
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x16d0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec8
+load:0x403cb700,len:0x3160
+entry 0x403c8950
+I (27) boot: ESP-IDF 8b7f8045 2nd stage bootloader
+I (27) boot: compile time Jul 17 2026 08:48:33
+I (27) boot: Multicore bootloader
+I (27) boot: chip revision: v0.2
+I (30) boot: efuse block revision: v1.4
+I (34) qio_mode: Enabling default flash chip QIO
+I (38) boot.esp32s3: Boot SPI Speed : 80MHz
+I (42) boot.esp32s3: SPI Mode       : QIO
+I (46) boot.esp32s3: SPI Flash Size : 16MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (76) boot:  2 factory          factory app      00 00 00010000 00400000
+I (82) boot:  3 storage          Unknown data     01 82 00410000 00100000
+I (89) boot: End of partition table
+I (92) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=5d9d0h (383440) map
+I (157) esp_image: segment 1: paddr=0006d9f8 vaddr=3fc94c00 size=02620h (  9760) load
+I (159) esp_image: segment 2: paddr=00070020 vaddr=42000020 size=44c50h (281680) map
+I (202) esp_image: segment 3: paddr=000b4c78 vaddr=3fc97220 size=034a0h ( 13472) load
+I (205) esp_image: segment 4: paddr=000b8120 vaddr=40374000 size=10bf0h ( 68592) load
+I (219) esp_image: segment 5: paddr=000c8d18 vaddr=50000000 size=0001ch (    28) load
+I (226) boot: Loaded app from partition at offset 0x10000
+I (226) boot: Disabling RNG early entropy source...
+I (237) octal_psram: vendor id    : 0x0d (AP)
+I (237) octal_psram: dev id       : 0x02 (generation 3)
+I (237) octal_psram: density      : 0x03 (64 Mbit)
+I (239) octal_psram: good-die     : 0x01 (Pass)
+I (243) octal_psram: Latency      : 0x01 (Fixed)
+I (248) octal_psram: VCC          : 0x01 (3V)
+I (252) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (257) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (262) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (266) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (271) octal_psram: DriveStrength: 0x00 (1/1)
+I (276) MSPI Timing: PSRAM timing tuning index: 5
+I (280) esp_psram: Found 8MB PSRAM device
+I (284) esp_psram: Speed: 80MHz
+I (287) cpu_start: Multicore app
+I (703) esp_psram: SPI SRAM memory test OK
+I (711) cpu_start: GPIO 44 and 43 are used as console UART I/O pins
+I (711) cpu_start: Pro cpu start user code
+I (711) cpu_start: cpu freq: 240000000 Hz
+I (713) app_init: Application information:
+I (717) app_init: Project name:     cfs_mcu
+I (721) app_init: App version:      1
+I (724) app_init: Compile time:     Jul 31 2026 07:29:33
+I (729) app_init: ELF file SHA256:  93e0e6621...
+I (734) app_init: ESP-IDF:          8b7f8045
+I (738) efuse_init: Min chip rev:     v0.0
+I (741) efuse_init: Max chip rev:     v0.99
+I (745) efuse_init: Chip rev:         v0.2
+I (749) heap_init: Initializing. RAM available for dynamic allocation:
+I (755) heap_init: At 3FC9E150 len 0004B5C0 (301 KiB): RAM
+I (761) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (766) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (771) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (776) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (783) spi_flash: detected chip: boya
+I (786) spi_flash: flash io: qio
+I (789) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (796) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (802) main_task: Started on CPU0
+I (826) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (826) main_task: Calling app_main()
+I (826) cfs_cam: trying pin map [1/2]: GOOUUU_ESP32S3_CAM
+I (831) s3 ll_cam: DMA Channel=0
+I (834) cam_hal: cam init ok
+I (837) sccb-ng: pin_sda 4 pin_scl 5
+I (840) sccb-ng: sccb_i2c_port=1
+I (854) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00
+I (854) camera: Detected OV3660 camera
+I (855) camera: Detected camera at address=0x3c
+I (1162) cam_hal: PSRAM DMA mode disabled
+I (1162) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 32
+I (1162) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 96, dma_buffer_size: 27648
+I (1171) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 1
+I (1181) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1187) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1192) cam_hal: cam config ok
+I (1207) ov3660: Calculated VCO: 160000000 Hz, PLLCLK: 160000000 Hz, SYSCLK: 40000000 Hz, PCLK: 10000000 Hz
+I (1223) cfs_cam: camera OK: pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660 (PID=0x3660)
+I (1251) cfs_main: TFLM ready: arena=160KB used=122576B in=96x96x1
+I (1253) cfs_ina219: CONFIG(0x00) power-on readback = 0x399F (expect 0x399F)
+I (1254) cfs_ina219: INA219 ready: SDA=1 SCL=2 addr=0x40 config=0x399F
+I (1272) cfs_meas: NVS ready: 0 stored run(s), next run_id=1
+I (1272) cfs_main: ================ cfs-mcu boot ================
+I (1272) cfs_main: PSRAM total: 8388608 bytes (8.0 MB) mode=Octal(OPI)
+I (1278) cfs_main: PSRAM free : 8201444 bytes
+I (1282) cfs_main: Camera     : pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660
+I (1288) cfs_main: Model      : person_detection, 300568 bytes
+I (1294) cfs_main: ==============================================
+I (1300) cfs_cmd: serial command interface ready @115200 (type HELP)
+I (1306) cfs_main: no boot-armed measurement (MEASURE <mode> <secs> on-boot to arm)
+I (1313) cfs_main: entering loop (default MODE idle R=10). Send HELP over serial.
+
+>>> HELP
+CMDS: MODE idle|active|gate|sweep|idle-skip [k=N] | SET R=N THETA=F | STATS | POWER on|off|probe|scan|live [secs] | HELP
+C2b: MEASURE <idle-skip|gate|active|ctrl-k10|ctrl-k5|ctrl-k2> <seconds> on-boot | MEASURE off | MEASURE status | DUMP | CLEAR
+
+>>> CLEAR
+OK CLEAR erased=0 (run ids stay monotonic; next=1)
+
+>>> MEASURE idle-skip 30 on-boot
+OK MEASURE armed mode=idle-skip secs=30 run_id=1 — power-cycle the board to run
+
+>>> MEASURE status
+MEASURE armed mode=idle-skip secs=30 stored=0 next_run_id=1
+
+>>> DUMP
+DUMP begin n=0
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run
+DUMP end
+
+--- reboot (DTR/RTS reset) ---
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x16d0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec8
+load:0x403cb700,len:0x3160
+entry 0x403c8950
+I (27) boot: ESP-IDF 8b7f8045 2nd stage bootloader
+I (27) boot: compile time Jul 17 2026 08:48:33
+I (27) boot: Multicore bootloader
+I (27) boot: chip revision: v0.2
+I (30) boot: efuse block revision: v1.4
+I (34) qio_mode: Enabling default flash chip QIO
+I (38) boot.esp32s3: Boot SPI Speed : 80MHz
+I (42) boot.esp32s3: SPI Mode       : QIO
+I (46) boot.esp32s3: SPI Flash Size : 16MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (76) boot:  2 factory          factory app      00 00 00010000 00400000
+I (82) boot:  3 storage          Unknown data     01 82 00410000 00100000
+I (89) boot: End of partition table
+I (92) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=5d9d0h (383440) map
+I (157) esp_image: segment 1: paddr=0006d9f8 vaddr=3fc94c00 size=02620h (  9760) load
+I (159) esp_image: segment 2: paddr=00070020 vaddr=42000020 size=44c50h (281680) map
+I (202) esp_image: segment 3: paddr=000b4c78 vaddr=3fc97220 size=034a0h ( 13472) load
+I (205) esp_image: segment 4: paddr=000b8120 vaddr=40374000 size=10bf0h ( 68592) load
+I (219) esp_image: segment 5: paddr=000c8d18 vaddr=50000000 size=0001ch (    28) load
+I (226) boot: Loaded app from partition at offset 0x10000
+I (226) boot: Disabling RNG early entropy source...
+I (237) octal_psram: vendor id    : 0x0d (AP)
+I (237) octal_psram: dev id       : 0x02 (generation 3)
+I (237) octal_psram: density      : 0x03 (64 Mbit)
+I (239) octal_psram: good-die     : 0x01 (Pass)
+I (243) octal_psram: Latency      : 0x01 (Fixed)
+I (248) octal_psram: VCC          : 0x01 (3V)
+I (252) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (257) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (262) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (266) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (271) octal_psram: DriveStrength: 0x00 (1/1)
+I (276) MSPI Timing: PSRAM timing tuning index: 5
+I (280) esp_psram: Found 8MB PSRAM device
+I (284) esp_psram: Speed: 80MHz
+I (287) cpu_start: Multicore app
+I (703) esp_psram: SPI SRAM memory test OK
+I (711) cpu_start: GPIO 44 and 43 are used as console UART I/O pins
+I (711) cpu_start: Pro cpu start user code
+I (711) cpu_start: cpu freq: 240000000 Hz
+I (713) app_init: Application information:
+I (717) app_init: Project name:     cfs_mcu
+I (721) app_init: App version:      1
+I (724) app_init: Compile time:     Jul 31 2026 07:29:33
+I (729) app_init: ELF file SHA256:  93e0e6621...
+I (734) app_init: ESP-IDF:          8b7f8045
+I (738) efuse_init: Min chip rev:     v0.0
+I (741) efuse_init: Max chip rev:     v0.99
+I (745) efuse_init: Chip rev:         v0.2
+I (749) heap_init: Initializing. RAM available for dynamic allocation:
+I (755) heap_init: At 3FC9E150 len 0004B5C0 (301 KiB): RAM
+I (761) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (766) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (771) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (776) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (783) spi_flash: detected chip: boya
+I (786) spi_flash: flash io: qio
+I (789) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (796) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (802) main_task: Started on CPU0
+I (826) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (826) main_task: Calling app_main()
+I (826) cfs_cam: trying pin map [1/2]: GOOUUU_ESP32S3_CAM
+I (831) s3 ll_cam: DMA Channel=0
+I (834) cam_hal: cam init ok
+I (837) sccb-ng: pin_sda 4 pin_scl 5
+I (840) sccb-ng: sccb_i2c_port=1
+I (854) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00
+I (854) camera: Detected OV3660 camera
+I (855) camera: Detected camera at address=0x3c
+I (1162) cam_hal: PSRAM DMA mode disabled
+I (1162) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 32
+I (1162) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 96, dma_buffer_size: 27648
+I (1171) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 1
+I (1181) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1187) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1192) cam_hal: cam config ok
+I (1207) ov3660: Calculated VCO: 160000000 Hz, PLLCLK: 160000000 Hz, SYSCLK: 40000000 Hz, PCLK: 10000000 Hz
+I (1223) cfs_cam: camera OK: pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660 (PID=0x3660)
+I (1251) cfs_main: TFLM ready: arena=160KB used=122576B in=96x96x1
+I (1253) cfs_ina219: CONFIG(0x00) power-on readback = 0x399F (expect 0x399F)
+I (1254) cfs_ina219: INA219 ready: SDA=1 SCL=2 addr=0x40 config=0x399F
+I (1273) cfs_meas: NVS ready: 0 stored run(s), next run_id=1
+I (1273) cfs_main: ================ cfs-mcu boot ================
+I (1273) cfs_main: PSRAM total: 8388608 bytes (8.0 MB) mode=Octal(OPI)
+I (1279) cfs_main: PSRAM free : 8201444 bytes
+I (1283) cfs_main: Camera     : pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660
+I (1290) cfs_main: Model      : person_detection, 300568 bytes
+I (1295) cfs_main: ==============================================
+I (1301) cfs_cmd: serial command interface ready @115200 (type HELP)
+I (1309) cfs_main: MEASURE armed run starting: mode=idle-skip secs=30 (R=10 theta=8.00 k=10 infer=0) run_id=1
+MEASURE start mode=idle-skip secs=30 run_id=1
+I (1321) cfs_main: entering loop (default MODE idle R=10). Send HELP over serial.
+I (31342) cfs_main: MEASURE done run_id=1 mode=idle-skip frames=750 opens=0 infer=0 elapsed_ms=30030 fps=24.98
+
+>>> DUMP
+_id=1 mode=idle-skip frames=750 opens=0 infer=0 elapsed_ms=30030 fps=24.98 (parked)
+DUMP begin n=1
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run
+DUMP,1,idle-skip,750,0,0,30030,24.98,0.0000,750
+DUMP end
+
+>>> MEASURE active 30 on-boot
+OK MEASURE armed mode=active secs=30 run_id=2 — power-cycle the board to run
+
+>>> MEASURE status
+MEASURE armed mode=active secs=30 stored=1 next_run_id=2
+
+>>> DUMP
+DUMP begin n=1
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run
+DUMP,1,idle-skip,750,0,0,30030,24.98,0.0000,750
+DUMP end
+
+--- reboot (DTR/RTS reset) ---
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x16d0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec8
+load:0x403cb700,len:0x3160
+entry 0x403c8950
+I (27) boot: ESP-IDF 8b7f8045 2nd stage bootloader
+I (27) boot: compile time Jul 17 2026 08:48:33
+I (27) boot: Multicore bootloader
+I (27) boot: chip revision: v0.2
+I (30) boot: efuse block revision: v1.4
+I (34) qio_mode: Enabling default flash chip QIO
+I (38) boot.esp32s3: Boot SPI Speed : 80MHz
+I (42) boot.esp32s3: SPI Mode       : QIO
+I (46) boot.esp32s3: SPI Flash Size : 16MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (76) boot:  2 factory          factory app      00 00 00010000 00400000
+I (82) boot:  3 storage          Unknown data     01 82 00410000 00100000
+I (89) boot: End of partition table
+I (92) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=5d9d0h (383440) map
+I (157) esp_image: segment 1: paddr=0006d9f8 vaddr=3fc94c00 size=02620h (  9760) load
+I (159) esp_image: segment 2: paddr=00070020 vaddr=42000020 size=44c50h (281680) map
+I (202) esp_image: segment 3: paddr=000b4c78 vaddr=3fc97220 size=034a0h ( 13472) load
+I (205) esp_image: segment 4: paddr=000b8120 vaddr=40374000 size=10bf0h ( 68592) load
+I (219) esp_image: segment 5: paddr=000c8d18 vaddr=50000000 size=0001ch (    28) load
+I (226) boot: Loaded app from partition at offset 0x10000
+I (226) boot: Disabling RNG early entropy source...
+I (237) octal_psram: vendor id    : 0x0d (AP)
+I (237) octal_psram: dev id       : 0x02 (generation 3)
+I (237) octal_psram: density      : 0x03 (64 Mbit)
+I (239) octal_psram: good-die     : 0x01 (Pass)
+I (243) octal_psram: Latency      : 0x01 (Fixed)
+I (248) octal_psram: VCC          : 0x01 (3V)
+I (252) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (257) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (262) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (266) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (271) octal_psram: DriveStrength: 0x00 (1/1)
+I (276) MSPI Timing: PSRAM timing tuning index: 5
+I (280) esp_psram: Found 8MB PSRAM device
+I (284) esp_psram: Speed: 80MHz
+I (287) cpu_start: Multicore app
+I (703) esp_psram: SPI SRAM memory test OK
+I (711) cpu_start: GPIO 44 and 43 are used as console UART I/O pins
+I (711) cpu_start: Pro cpu start user code
+I (711) cpu_start: cpu freq: 240000000 Hz
+I (713) app_init: Application information:
+I (717) app_init: Project name:     cfs_mcu
+I (721) app_init: App version:      1
+I (724) app_init: Compile time:     Jul 31 2026 07:29:33
+I (729) app_init: ELF file SHA256:  93e0e6621...
+I (734) app_init: ESP-IDF:          8b7f8045
+I (738) efuse_init: Min chip rev:     v0.0
+I (741) efuse_init: Max chip rev:     v0.99
+I (745) efuse_init: Chip rev:         v0.2
+I (749) heap_init: Initializing. RAM available for dynamic allocation:
+I (755) heap_init: At 3FC9E150 len 0004B5C0 (301 KiB): RAM
+I (761) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (766) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (771) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (776) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (783) spi_flash: detected chip: boya
+I (786) spi_flash: flash io: qio
+I (789) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (796) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (802) main_task: Started on CPU0
+I (826) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (826) main_task: Calling app_main()
+I (826) cfs_cam: trying pin map [1/2]: GOOUUU_ESP32S3_CAM
+I (831) s3 ll_cam: DMA Channel=0
+I (834) cam_hal: cam init ok
+I (837) sccb-ng: pin_sda 4 pin_scl 5
+I (840) sccb-ng: sccb_i2c_port=1
+I (854) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00
+I (854) camera: Detected OV3660 camera
+I (855) camera: Detected camera at address=0x3c
+I (1162) cam_hal: PSRAM DMA mode disabled
+I (1162) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 32
+I (1162) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 96, dma_buffer_size: 27648
+I (1171) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 1
+I (1181) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1187) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1192) cam_hal: cam config ok
+I (1207) ov3660: Calculated VCO: 160000000 Hz, PLLCLK: 160000000 Hz, SYSCLK: 40000000 Hz, PCLK: 10000000 Hz
+I (1223) cfs_cam: camera OK: pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660 (PID=0x3660)
+I (1251) cfs_main: TFLM ready: arena=160KB used=122576B in=96x96x1
+I (1253) cfs_ina219: CONFIG(0x00) power-on readback = 0x399F (expect 0x399F)
+I (1254) cfs_ina219: INA219 ready: SDA=1 SCL=2 addr=0x40 config=0x399F
+I (1273) cfs_meas: NVS ready: 1 stored run(s), next run_id=2
+I (1274) cfs_main: ================ cfs-mcu boot ================
+I (1274) cfs_main: PSRAM total: 8388608 bytes (8.0 MB) mode=Octal(OPI)
+I (1280) cfs_main: PSRAM free : 8201444 bytes
+I (1284) cfs_main: Camera     : pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660
+I (1291) cfs_main: Model      : person_detection, 300568 bytes
+I (1296) cfs_main: ==============================================
+I (1302) cfs_cmd: serial command interface ready @115200 (type HELP)
+I (1310) cfs_main: MEASURE armed run starting: mode=active secs=30 (R=10 theta=8.00 k=10 infer=1) run_id=2
+MEASURE start mode=active secs=30 run_id=2
+I (1321) cfs_main: entering loop (default MODE idle R=10). Send HELP over serial.
+I (31334) cfs_main: MEASURE done run_id=2 mode=active frames=416 opens=416 infer=416 elapsed_ms=30021 fps=13.86
+
+>>> DUMP
+n_id=2 mode=active frames=416 opens=416 infer=416 elapsed_ms=30021 fps=13.86 (parked)
+DUMP begin n=2
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run
+DUMP,1,idle-skip,750,0,0,30030,24.98,0.0000,750
+DUMP,2,active,416,416,416,30021,13.86,1.0000,0
+DUMP end
+
+>>> MEASURE ctrl-k5 30 on-boot
+OK MEASURE armed mode=ctrl-k5 secs=30 run_id=3 — power-cycle the board to run
+
+>>> MEASURE status
+MEASURE armed mode=ctrl-k5 secs=30 stored=2 next_run_id=3
+
+>>> DUMP
+DUMP begin n=2
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run
+DUMP,1,idle-skip,750,0,0,30030,24.98,0.0000,750
+DUMP,2,active,416,416,416,30021,13.86,1.0000,0
+DUMP end
+
+--- reboot (DTR/RTS reset) ---
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x16d0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xec8
+load:0x403cb700,len:0x3160
+entry 0x403c8950
+I (27) boot: ESP-IDF 8b7f8045 2nd stage bootloader
+I (27) boot: compile time Jul 17 2026 08:48:33
+I (27) boot: Multicore bootloader
+I (27) boot: chip revision: v0.2
+I (30) boot: efuse block revision: v1.4
+I (34) qio_mode: Enabling default flash chip QIO
+I (38) boot.esp32s3: Boot SPI Speed : 80MHz
+I (42) boot.esp32s3: SPI Mode       : QIO
+I (46) boot.esp32s3: SPI Flash Size : 16MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (76) boot:  2 factory          factory app      00 00 00010000 00400000
+I (82) boot:  3 storage          Unknown data     01 82 00410000 00100000
+I (89) boot: End of partition table
+I (92) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=5d9d0h (383440) map
+I (157) esp_image: segment 1: paddr=0006d9f8 vaddr=3fc94c00 size=02620h (  9760) load
+I (159) esp_image: segment 2: paddr=00070020 vaddr=42000020 size=44c50h (281680) map
+I (202) esp_image: segment 3: paddr=000b4c78 vaddr=3fc97220 size=034a0h ( 13472) load
+I (205) esp_image: segment 4: paddr=000b8120 vaddr=40374000 size=10bf0h ( 68592) load
+I (219) esp_image: segment 5: paddr=000c8d18 vaddr=50000000 size=0001ch (    28) load
+I (226) boot: Loaded app from partition at offset 0x10000
+I (226) boot: Disabling RNG early entropy source...
+I (237) octal_psram: vendor id    : 0x0d (AP)
+I (237) octal_psram: dev id       : 0x02 (generation 3)
+I (237) octal_psram: density      : 0x03 (64 Mbit)
+I (239) octal_psram: good-die     : 0x01 (Pass)
+I (243) octal_psram: Latency      : 0x01 (Fixed)
+I (248) octal_psram: VCC          : 0x01 (3V)
+I (252) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (257) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (262) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (266) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (271) octal_psram: DriveStrength: 0x00 (1/1)
+I (276) MSPI Timing: PSRAM timing tuning index: 5
+I (280) esp_psram: Found 8MB PSRAM device
+I (284) esp_psram: Speed: 80MHz
+I (287) cpu_start: Multicore app
+I (703) esp_psram: SPI SRAM memory test OK
+I (711) cpu_start: GPIO 44 and 43 are used as console UART I/O pins
+I (711) cpu_start: Pro cpu start user code
+I (711) cpu_start: cpu freq: 240000000 Hz
+I (713) app_init: Application information:
+I (717) app_init: Project name:     cfs_mcu
+I (721) app_init: App version:      1
+I (724) app_init: Compile time:     Jul 31 2026 07:29:33
+I (729) app_init: ELF file SHA256:  93e0e6621...
+I (734) app_init: ESP-IDF:          8b7f8045
+I (738) efuse_init: Min chip rev:     v0.0
+I (741) efuse_init: Max chip rev:     v0.99
+I (745) efuse_init: Chip rev:         v0.2
+I (749) heap_init: Initializing. RAM available for dynamic allocation:
+I (755) heap_init: At 3FC9E150 len 0004B5C0 (301 KiB): RAM
+I (761) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (766) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (771) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (776) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (783) spi_flash: detected chip: boya
+I (786) spi_flash: flash io: qio
+I (789) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (796) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (802) main_task: Started on CPU0
+I (826) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (826) main_task: Calling app_main()
+I (826) cfs_cam: trying pin map [1/2]: GOOUUU_ESP32S3_CAM
+I (831) s3 ll_cam: DMA Channel=0
+I (834) cam_hal: cam init ok
+I (837) sccb-ng: pin_sda 4 pin_scl 5
+I (840) sccb-ng: sccb_i2c_port=1
+I (854) camera: Camera PID=0x3660 VER=0x00 MIDL=0x00 MIDH=0x00
+I (854) camera: Detected OV3660 camera
+I (855) camera: Detected camera at address=0x3c
+I (1162) cam_hal: PSRAM DMA mode disabled
+I (1162) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 32
+I (1162) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 96, dma_buffer_size: 27648
+I (1171) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 1
+I (1181) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1187) cam_hal: Allocating 9216 Byte frame buffer in PSRAM
+I (1192) cam_hal: cam config ok
+I (1207) ov3660: Calculated VCO: 160000000 Hz, PLLCLK: 160000000 Hz, SYSCLK: 40000000 Hz, PCLK: 10000000 Hz
+I (1223) cfs_cam: camera OK: pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660 (PID=0x3660)
+I (1251) cfs_main: TFLM ready: arena=160KB used=122576B in=96x96x1
+I (1253) cfs_ina219: CONFIG(0x00) power-on readback = 0x399F (expect 0x399F)
+I (1254) cfs_ina219: INA219 ready: SDA=1 SCL=2 addr=0x40 config=0x399F
+I (1274) cfs_meas: NVS ready: 2 stored run(s), next run_id=3
+I (1275) cfs_main: ================ cfs-mcu boot ================
+I (1275) cfs_main: PSRAM total: 8388608 bytes (8.0 MB) mode=Octal(OPI)
+I (1281) cfs_main: PSRAM free : 8201444 bytes
+I (1285) cfs_main: Camera     : pinmap=GOOUUU_ESP32S3_CAM sensor=OV3660
+I (1291) cfs_main: Model      : person_detection, 300568 bytes
+I (1297) cfs_main: ==============================================
+I (1303) cfs_cmd: serial command interface ready @115200 (type HELP)
+I (1310) cfs_main: MEASURE armed run starting: mode=ctrl-k5 secs=30 (R=10 theta=8.00 k=5 infer=1) run_id=3
+MEASURE start mode=ctrl-k5 secs=30 run_id=3
+I (1322) cfs_main: entering loop (default MODE idle R=10). Send HELP over serial.
+I (31342) cfs_main: MEASURE done run_id=3 mode=ctrl-k5 frames=625 opens=125 infer=125 elapsed_ms=30030 fps=20.81
+
+>>> DUMP
+un_id=3 mode=ctrl-k5 frames=625 opens=125 infer=125 elapsed_ms=30030 fps=20.81 (parked)
+DUMP begin n=3
+DUMP,run_id,mode,frames,opens,infer_count,elapsed_ms,fps,open_frac,max_closed_run
+DUMP,1,idle-skip,750,0,0,30030,24.98,0.0000,750
+DUMP,2,active,416,416,416,30021,13.86,1.0000,0
+DUMP,3,ctrl-k5,625,125,125,30030,20.81,0.2000,4
+DUMP end
+
+>>> SET R=10 THETA=8.0
+OK R=10 THETA=8.00
+
+>>> MODE idle
+OK mode=idle sweep_k=0
+
+>>> STATS
+STATS {"mode":"idle","R":10,"theta":8.00,"sweep_k":5,"fps":22.57,"open_frac":0.1006,"frames":497,"opens":50,"infer_count":50,"infer_us_mean":70821.0,"infer_us_max":71119,"max_closed_run":9,"person":-14,"noperson":14,"heap_free":8500527,"psram_free":8199688,"power_on":0,"ina219":1,"power_mw_mean":0.00,"power_samples":0,"infer_enabled":1,"parked":0,"meas_running":0,"stored_runs":3}

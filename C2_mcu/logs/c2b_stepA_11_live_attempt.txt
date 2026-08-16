@@ -1,0 +1,9 @@
+
+===== SEND: POWER PROBE =====
+PROBE addr=0x40 sda=1 scl=2 ack=0 err=0x103 (ESP_ERR_INVALID_STATE)
+
+===== SEND: POWER LIVE 10 =====
+ERR INA219 not available — run POWER PROBE / POWER SCAN
+
+===== SEND: STATS =====
+STATS {"mode":"idle","R":10,"theta":8.00,"sweep_k":10,"fps":22.56,"open_frac":0.1002,"frames":1876,"opens":188,"infer_count":188,"infer_us_mean":70730.4,"infer_us_max":72678,"max_closed_run":9,"person":9,"noperson":-9,"heap_free":8504647,"psram_free":8199688,"power_on":0,"ina219":0,"power_mw_mean":0.00,"power_samples":0}

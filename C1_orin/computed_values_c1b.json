@@ -1,0 +1,141 @@
+{
+  "W_static": 4.446066666666667,
+  "W_idleskip26": 4.892233333333333,
+  "W_idleskipv3": 4.634166666666667,
+  "W_idlegate": 4.803633333333333,
+  "E_idle_idleskip_yolo26s": {
+    "total": 163.07444444444445,
+    "marg_static": 14.87222222222222
+  },
+  "E_idle_idleskip_yolov3": {
+    "total": 154.47222222222223,
+    "marg_static": 6.270000000000013
+  },
+  "E_idle_idlegate": {
+    "total": 160.1211111111111,
+    "marg_static": 11.91888888888887
+  },
+  "table": [
+    {
+      "tag": "static",
+      "detector": "none",
+      "runtime": "n/a",
+      "mode": "static",
+      "W": 4.446066666666667,
+      "Wstd": 0.002043417616532503,
+      "fps": 19.96,
+      "E_total": 222.74883099532397,
+      "E_marg_static": 0.0
+    },
+    {
+      "tag": "idle_yolo26s",
+      "detector": "yolo26s",
+      "runtime": "cpu",
+      "mode": "idle-skip",
+      "W": 4.892233333333333,
+      "Wstd": 0.0021638443156155557,
+      "fps": 30.0,
+      "E_total": 163.07444444444445,
+      "E_marg_static": 14.87222222222222
+    },
+    {
+      "tag": "idle_yolov3",
+      "detector": "yolov3u",
+      "runtime": "cpu",
+      "mode": "idle-skip",
+      "W": 4.634166666666667,
+      "Wstd": 0.003546202977207417,
+      "fps": 30.0,
+      "E_total": 154.47222222222223,
+      "E_marg_static": 6.270000000000013
+    },
+    {
+      "tag": "idlegate",
+      "detector": "none",
+      "runtime": "cpu-mog2",
+      "mode": "idle-gate",
+      "W": 4.803633333333333,
+      "Wstd": 0.0054186919290752375,
+      "fps": 30.0,
+      "E_total": 160.1211111111111,
+      "E_marg_static": 11.91888888888887
+    },
+    {
+      "tag": "active_yolo26s",
+      "detector": "yolo26s",
+      "runtime": "ort-cuda",
+      "mode": "active",
+      "W": 8.7952,
+      "Wstd": 0.06260654917818066,
+      "fps": 17.606666666666666,
+      "E_total": 499.53805376751234,
+      "E_marg_static": 247.0162817114729,
+      "E_marg_gate": 226.70768648239303
+    },
+    {
+      "tag": "active_trt_yolo26s",
+      "detector": "yolo26s",
+      "runtime": "trt-fp16",
+      "mode": "active",
+      "W": 6.6805666666666665,
+      "Wstd": 0.007361763073853824,
+      "fps": 26.729333333333333,
+      "E_total": 249.93390532249217,
+      "E_marg_static": 83.5972963535691,
+      "E_marg_gate": 70.21998303985636
+    },
+    {
+      "tag": "active_yolov3",
+      "detector": "yolov3u",
+      "runtime": "ort-cuda",
+      "mode": "active",
+      "W": 11.0122,
+      "Wstd": 0.006130252849597881,
+      "fps": 7.872,
+      "E_total": 1398.9075203252032,
+      "E_marg_static": 834.1124661246613,
+      "E_marg_gate": 788.6898712737128
+    },
+    {
+      "tag": "active_trt_yolov3",
+      "detector": "yolov3u",
+      "runtime": "trt-fp16",
+      "mode": "active",
+      "W": 8.497433333333333,
+      "Wstd": 0.006381396573025276,
+      "fps": 20.530666666666665,
+      "E_total": 413.88979088193275,
+      "E_marg_static": 197.3324457721782,
+      "E_marg_gate": 179.91622288608914
+    }
+  ],
+  "paper": {
+    "E_idle": 30.4,
+    "E_active": 290.8,
+    "kappa": 9.56578947368421
+  },
+  "reconciliation": {
+    "E_idle_used": 11.91888888888887,
+    "E_idle_ratio_vs_paper": 0.3920687134502918,
+    "active_trt_yolov3": {
+      "E_active_marg_gate": 179.91622288608914,
+      "ratio_vs_paper": 0.6186940264308429,
+      "kappa_gate": 15.095049929848091
+    },
+    "active_trt_yolo26s": {
+      "E_active_marg_gate": 70.21998303985636,
+      "ratio_vs_paper": 0.2414717436033575,
+      "kappa_gate": 5.891487343700086
+    },
+    "active_yolov3": {
+      "E_active_marg_gate": 788.6898712737128,
+      "ratio_vs_paper": 2.7121384844350507,
+      "kappa_gate": 66.17142576175469
+    },
+    "active_yolo26s": {
+      "E_active_marg_gate": 226.70768648239303,
+      "ratio_vs_paper": 0.7796000222915853,
+      "kappa_gate": 19.02087422710488
+    }
+  }
+}

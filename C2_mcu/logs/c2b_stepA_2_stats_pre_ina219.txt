@@ -1,0 +1,2 @@
+﻿Connected to COM4 @ 115200
+STATS OK -> {"mode":"idle","R":10,"theta":8.0,"sweep_k":10,"fps":22.23,"open_frac":0.1004,"frames":548,"opens":55,"infer_count":55,"infer_us_mean":70642.7,"infer_us_max":70700,"max_closed_run":9,"person":-11,"noperson":11,"heap_free":8505883,"psram_free":8200848,"power_on":0,"ina219":0,"power_mw_mean":0.0,"power_samples":0}

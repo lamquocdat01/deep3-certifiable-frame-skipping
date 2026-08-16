@@ -1,0 +1,6 @@
+
+===== SEND: MEASURE ctrl-k10 330 on-boot =====
+OK MEASURE armed mode=ctrl-k10 secs=330 run_id=18 — power-cycle the board to run
+
+===== SEND: MEASURE status =====
+MEASURE armed mode=ctrl-k10 secs=330 stored=9 next_run_id=18

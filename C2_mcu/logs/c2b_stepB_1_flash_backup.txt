@@ -1,0 +1,60 @@
+c2b step B — full-flash backup taken BEFORE flashing the boot-armed firmware
+============================================================================
+Date        : 2026-07-31
+Port        : COM4 (USB-Enhanced-SERIAL CH343)
+Reason      : the board was still running the pre-boot-armed C2a build
+              (HELP had no MEASURE/DUMP/CLEAR — see c2b_stepA4_5_help.txt).
+              There is no git repository covering cfs-mcu/ and the source tree
+              already carries the boot-armed edits, so the running image could
+              not be rebuilt. A full-flash read-back is the only way to make
+              the flash operation reversible. NVS is included deliberately:
+              the boot-armed firmware writes NVS (namespace cfs_c2b).
+
+--- 1. esptool flash_id ----------------------------------------------------
+esptool.py --port COM4 flash_id
+esptool.py v4.12.0
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 28:84:85:9f:b7:38
+Manufacturer: 68
+Device: 4018
+Detected flash size: 16MB
+Flash type set in eFuse: quad (4 data lines)
+Flash voltage set by eFuse to 3.3V
+
+--- 2. full read-back (0x000000 .. 0x1000000, i.e. all 16 MB) ---------------
+esptool.py --port COM4 --baud 921600 read_flash 0 0x1000000 \
+    C2_mcu/fw_backup/c2b_flash_full_backup_pre_bootarmed_20260731.bin
+(esptool's per-4-KB progress counter is omitted here; it completed the full
+ 16,777,216 bytes without a retry or a checksum error.)
+
+--- 3. validation of the dump ---------------------------------------------
+file      : C2_mcu/fw_backup/c2b_flash_full_backup_pre_bootarmed_20260731.bin
+size      : 16,777,216 bytes  (= 0x1000000, exactly the detected flash size)
+sha256    : A7C25B4FED6F6C5141CED05A430FF9AC53C498FAD2667E406B328FB3ED594803
+
+not-blank : 1,018,505 bytes differ from 0xFF (6.07 % of the image).
+            An erased or failed read would be 100 % 0xFF; 6.07 % is the
+            expected occupancy (bootloader + 757 KB app + tables), and the
+            remaining 0xFF is the unused tail of the 4 MB factory partition
+            and the 1 MB storage partition.
+            16,641,994 bytes differ from 0x00 (99.19 %) — not a zero-fill either.
+
+structure : header magics read back out of the dump itself —
+            0x000000 (bootloader)  : E9 04 02 4F 50 89 3C 40 ...  ESP image magic 0xE9  OK
+            0x010000 (factory app) : E9 06 02 4F 18 56 37 40 ...  ESP image magic 0xE9  OK
+            0x008000 (part. table) : AA 50 01 02 00 90 00 00 00 60 00 00 6E 76 73 00
+                                     magic 0xAA50, first entry "nvs" @0x9000 len 0x6000
+                                     — matches the partition table in the boot log.
+            The dump is a structurally valid ESP32-S3 flash image, not padding.
+
+--- 4. RESTORE COMMAND (if the post-flash C2a check fails) ------------------
+cd "D:\PhD Program\03.Final Submission\09.05 Certifiable worst-case\Revision_IoTJ\cfs-mcu"
+python -m esptool --port COM4 --baud 921600 write_flash 0x0 ^
+  "..\C2_mcu\fw_backup\c2b_flash_full_backup_pre_bootarmed_20260731.bin"
+
+(run inside an ESP-IDF 5.4 shell — `. C:\esp\esp-idf\export.ps1` — because
+ esptool is not installed in the system Python. This restores bootloader,
+ partition table, app and NVS bit-exactly to the pre-flash state. Verify with
+ `python -m esptool --port COM4 verify_flash 0x0 <that same file>`.)

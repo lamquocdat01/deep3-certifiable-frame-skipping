@@ -1,0 +1,17 @@
+
+===== SEND: POWER PROBE =====
+PROBE addr=0x40 sda=1 scl=2 reg0x00=0x399F por_expect=0x399F ack=1 init_readback=0x399F
+
+===== SEND: POWER LIVE 5 =====
+LIVE start secs=5 addr=0x40 (VIN floating during step A: mV/mA/mW are NOT a measurement)
+LIVE t=0.00 bus_v=0.016 current_ma=-0.3 power_mw=0.0 raw_bus=0x0022 raw_cur=0xFFFD raw_pow=0x0000 err=0x0
+LIVE t=0.51 bus_v=0.016 current_ma=-0.4 power_mw=0.0 raw_bus=0x0022 raw_cur=0xFFFC raw_pow=0x0000 err=0x0
+LIVE t=1.01 bus_v=0.016 current_ma=-0.2 power_mw=0.0 raw_bus=0x0022 raw_cur=0xFFFE raw_pow=0x0000 err=0x0
+LIVE t=1.51 bus_v=0.016 current_ma=0.0 power_mw=0.0 raw_bus=0x0022 raw_cur=0x0000 raw_pow=0x0000 err=0x0
+LIVE t=2.01 bus_v=0.016 current_ma=-0.4 power_mw=0.0 raw_bus=0x0022 raw_cur=0xFFFC raw_pow=0x0000 err=0x0
+LIVE t=2.52 bus_v=0.016 current_ma=-0.2 power_mw=0.0 raw_bus=0x0022 raw_cur=0xFFFE raw_pow=0x0000 err=0x0
+LIVE t=3.02 bus_v=0.012 current_ma=-0.4 power_mw=0.0 raw_bus=0x001A raw_cur=0xFFFC raw_pow=0x0000 err=0x0
+LIVE t=3.52 bus_v=0.016 current_ma=-0.1 power_mw=0.0 raw_bus=0x0022 raw_cur=0xFFFF raw_pow=0x0000 err=0x0
+LIVE t=4.02 bus_v=0.016 current_ma=-0.2 power_mw=0.0 raw_bus=0x0022 raw_cur=0xFFFE raw_pow=0x0000 err=0x0
+LIVE t=4.52 bus_v=0.012 current_ma=-0.3 power_mw=0.0 raw_bus=0x001A raw_cur=0xFFFD raw_pow=0x0000 err=0x0
+LIVE done

@@ -1,0 +1,34 @@
+menu "CFS-MCU configuration"
+
+    config CFS_HAS_INA219
+        bool "INA219 power sensor present (C2b hardware)"
+        default n
+        help
+            Compile the INA219 I2C power-sensor driver and enable the `POWER`
+            serial command. Leave OFF until the C2b measurement hardware
+            (INA219 in series on the 5V rail) is wired. When OFF the driver is
+            still compiled inert-free (excluded) and `POWER on` reports that no
+            sensor is configured.
+
+    config CFS_INA219_SDA_GPIO
+        int "INA219 I2C SDA GPIO"
+        depends on CFS_HAS_INA219
+        default 1
+        help
+            SDA pin for the INA219. Default GPIO1. If it clashes with the
+            detected camera pin map, change here AND record the change in the
+            README wiring guide.
+
+    config CFS_INA219_SCL_GPIO
+        int "INA219 I2C SCL GPIO"
+        depends on CFS_HAS_INA219
+        default 2
+        help
+            SCL pin for the INA219. Default GPIO2.
+
+    config CFS_INA219_ADDR
+        hex "INA219 I2C address"
+        depends on CFS_HAS_INA219
+        default 0x40
+
+endmenu
