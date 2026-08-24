@@ -40,7 +40,7 @@ Instrument
 RD UM24C: 0.001 A current resolution, 0.01 V voltage resolution, ~2 Hz internal
 refresh. Polling faster than ~2 Hz returns repeated registers, so the default
 poll rate here is 1 Hz — comfortably below the refresh rate and matching the
-protocol in ``C2_mcu/PROMPT_C2b_usbmeter.md``.
+USB-meter logging protocol used for the C2b runs.
 
 Requires ``pyserial``; uses ``rdserialtool`` (``pip install rdserialtool``) to
 decode frames when it is importable, and falls back to the built-in decoder
@@ -68,7 +68,7 @@ UM24C_VOLT_DIV = 100.0     # raw counts -> volts   (0.01 V resolution)
 UM24C_AMP_DIV = 1000.0     # raw counts -> amps    (0.001 A resolution)
 UM24C_WATT_DIV = 1000.0    # raw counts -> watts   (mW register)
 
-# Plausibility gates from PROMPT_C2b_usbmeter.md. Outside these, STOP and
+# Plausibility gates from the C2b measurement protocol. Outside these, STOP and
 # diagnose — do not "fix" a log by trimming it.
 GATE_VOLT = (4.7, 5.3)
 GATE_WATT = (0.2, 2.5)

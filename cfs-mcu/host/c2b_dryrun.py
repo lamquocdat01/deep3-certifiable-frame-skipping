@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """c2b_dryrun.py — execute the C2b Setup-item-1 acceptance on PC power.
 
-This is the acceptance in `C2_mcu/PROMPT_C2b_usbmeter.md` Setup §1 / Step B,
+This is the C2b Setup item-1 acceptance for the USB-meter protocol,
 automated end to end so it costs one command when the board is connected:
 
   (a) arm `MEASURE idle-skip 30 on-boot`, reboot, DUMP -> exactly one new

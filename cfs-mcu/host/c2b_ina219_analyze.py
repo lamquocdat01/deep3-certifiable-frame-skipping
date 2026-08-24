@@ -33,7 +33,7 @@ SWEEP = ["ctrl-k10", "ctrl-k5", "ctrl-k2"]
 # convention below.
 FIT_MODES = ["idle-skip", "ctrl-k10", "ctrl-k5", "ctrl-k2", "active"]
 
-# Per-run acceptance thresholds (PROMPT_C2b_INA219_step2, Part A).
+# Per-run acceptance thresholds (INA219 measurement protocol, Part A).
 SAMPLE_TOL = 0.05        # power_samples vs expected
 PVI_TOL = 0.02           # mean_mw vs mean_v * mean_ma
 V_RANGE = (4.7, 5.3)
