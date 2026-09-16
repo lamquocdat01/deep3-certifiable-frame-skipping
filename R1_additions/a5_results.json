@@ -1,0 +1,297 @@
+{
+ "protocol": {
+  "source": "D:\\PhD Program\\03.Final Submission\\09.05 Certifiable worst-case\\certifiable-frame-skipping\\data\\processed\\events_gated.csv",
+  "events": 3713,
+  "R": 5,
+  "delta": 0.05,
+  "min_events_per_video": 5,
+  "policy_fixed_phase": "periodic refresh, OPEN at frames = 0 (mod R); miss iff D < R and 1 <= onset mod R <= R - D",
+  "policy_randomized_phase": "Prop. 6 with re-draw period T = R: Phi_b ~ Uniform{0..R-1} i.i.d. per R-frame block, plus a forced OPEN on every block boundary",
+  "policy_jittered_no_boundary": "same block re-draw but WITHOUT the forced boundary OPEN (activation stays exactly 1/R, inter-refresh gap grows to 2R-1)",
+  "seed": 20260916,
+  "n_sim": 2000,
+  "n_perm": 2000,
+  "n_boot": 1000,
+  "note": "budgets are applied CONDITIONALLY on the duration sequence; only the refresh phase is random."
+ },
+ "p_formula": 0.4073,
+ "p_simulated_fixed_phase": 0.4099,
+ "miss_autocorr": {
+  "1": 0.0599,
+  "2": 0.0309,
+  "3": -0.0125,
+  "4": 0.0065,
+  "5": -0.0125,
+  "6": -0.0212,
+  "7": -0.0312,
+  "8": -0.018,
+  "9": -0.0248,
+  "10": -0.0127
+ },
+ "duration_autocorr_log": {
+  "1": 0.1979,
+  "2": 0.0814,
+  "3": 0.041,
+  "4": 0.0238,
+  "5": 0.0231,
+  "6": -0.0146,
+  "7": -0.0014,
+  "8": -0.013,
+  "9": -0.0137,
+  "10": -0.0037
+ },
+ "m_eff_autocorr": 2,
+ "structural": {
+  "min_onset_separation_frames": 2,
+  "max_onsets_in_one_block_observed": 3,
+  "max_onsets_in_one_block_ceilR2": 3,
+  "m_structural_tight": 2,
+  "m_structural_upper_bound": 5,
+  "comment": "m = (max onsets sharing one block) - 1; m <= ceil(R/2) - 1 <= R."
+ },
+ "n_videos_ge5": 75,
+ "n_events_in_those_videos": 3652,
+ "coverage_fixed_phase": {
+  "1": 0.88,
+  "2": 0.92,
+  "3": 0.9467,
+  "4": 0.96,
+  "5": 0.9733,
+  "6": 1.0,
+  "8": 1.0,
+  "10": 1.0
+ },
+ "fleet_prop_s5": {
+  "events": 3713,
+  "missed": 1522,
+  "expected": 1512.4,
+  "budget_95": 2270.0,
+  "within_budget": true,
+  "videos": 121
+ },
+ "coverage_randomized_phase": {
+  "1": 0.9742,
+  "2": 0.9965,
+  "3": 0.9999,
+  "4": 1.0,
+  "5": 1.0,
+  "6": 1.0,
+  "8": 1.0,
+  "10": 1.0
+ },
+ "coverage_randomized_phase_ci95": {
+  "1": [
+   0.9467,
+   1.0
+  ],
+  "2": [
+   0.9867,
+   1.0
+  ],
+  "3": [
+   1.0,
+   1.0
+  ],
+  "4": [
+   1.0,
+   1.0
+  ],
+  "5": [
+   1.0,
+   1.0
+  ],
+  "6": [
+   1.0,
+   1.0
+  ],
+  "8": [
+   1.0,
+   1.0
+  ],
+  "10": [
+   1.0,
+   1.0
+  ]
+ },
+ "randomized_phase_realised_miss_rate": {
+  "mean": 0.3012,
+  "ci95": [
+   0.2924,
+   0.31
+  ],
+  "budget_centre_used": 0.4073
+ },
+ "coverage_jittered_no_boundary": {
+  "1": 0.8703,
+  "2": 0.9171,
+  "3": 0.9449,
+  "4": 0.9593,
+  "5": 0.9717,
+  "6": 0.9877,
+  "8": 0.9996,
+  "10": 1.0
+ },
+ "jittered_realised_miss_rate": 0.4273,
+ "activation_price": {
+  "fixed_phase_activation": 0.2,
+  "fixed_phase_energy_mJ": 82.5,
+  "randomized_phase_activation": 0.36,
+  "randomized_phase_energy_mJ": 124.1,
+  "extra_activation": 0.16,
+  "extra_activation_bound_1_over_T": 0.2,
+  "energy_ratio": 1.505,
+  "jittered_activation": 0.2,
+  "jittered_max_refresh_gap": 9
+ },
+ "block_permutation_test": {
+  "1": {
+   "block_length": 1,
+   "runs_observed": 1442,
+   "runs_null_mean": 1560.0,
+   "runs_p_two_sided": 0.0,
+   "dmax_observed": 38.54,
+   "dmax_null_mean": 37.454,
+   "dmax_p_upper": 0.093
+  },
+  "2": {
+   "block_length": 2,
+   "runs_observed": 1442,
+   "runs_null_mean": 1525.1,
+   "runs_p_two_sided": 0.0,
+   "dmax_observed": 38.54,
+   "dmax_null_mean": 37.556,
+   "dmax_p_upper": 0.116
+  },
+  "3": {
+   "block_length": 3,
+   "runs_observed": 1442,
+   "runs_null_mean": 1501.4,
+   "runs_p_two_sided": 0.0,
+   "dmax_observed": 38.54,
+   "dmax_null_mean": 37.934,
+   "dmax_p_upper": 0.2335
+  },
+  "5": {
+   "block_length": 5,
+   "runs_observed": 1442,
+   "runs_null_mean": 1468.4,
+   "runs_p_two_sided": 0.016,
+   "dmax_observed": 38.54,
+   "dmax_null_mean": 38.164,
+   "dmax_p_upper": 0.333
+  }
+ },
+ "mutual_information": {
+  "1": {
+   "mi_bits": 0.033732,
+   "boot_ci95": [
+    0.017633,
+    0.053963
+   ],
+   "null_mean_bits": 0.015937,
+   "null_q95_bits": 0.02147,
+   "p_value": 0.0,
+   "distinguishable_from_zero": true
+  },
+  "2": {
+   "mi_bits": 0.026106,
+   "boot_ci95": [
+    0.014817,
+    0.040832
+   ],
+   "null_mean_bits": 0.015818,
+   "null_q95_bits": 0.02133,
+   "p_value": 0.003,
+   "distinguishable_from_zero": true
+  },
+  "3": {
+   "mi_bits": 0.016005,
+   "boot_ci95": [
+    0.006543,
+    0.030196
+   ],
+   "null_mean_bits": 0.015326,
+   "null_q95_bits": 0.020848,
+   "p_value": 0.402,
+   "distinguishable_from_zero": false
+  },
+  "4": {
+   "mi_bits": 0.019151,
+   "boot_ci95": [
+    0.007536,
+    0.036113
+   ],
+   "null_mean_bits": 0.014699,
+   "null_q95_bits": 0.019985,
+   "p_value": 0.08,
+   "distinguishable_from_zero": false
+  },
+  "5": {
+   "mi_bits": 0.015099,
+   "boot_ci95": [
+    0.005605,
+    0.029041
+   ],
+   "null_mean_bits": 0.014269,
+   "null_q95_bits": 0.019539,
+   "p_value": 0.385,
+   "distinguishable_from_zero": false
+  },
+  "6": {
+   "mi_bits": 0.013457,
+   "boot_ci95": [
+    0.004974,
+    0.026854
+   ],
+   "null_mean_bits": 0.013708,
+   "null_q95_bits": 0.018992,
+   "p_value": 0.503,
+   "distinguishable_from_zero": false
+  },
+  "7": {
+   "mi_bits": 0.011105,
+   "boot_ci95": [
+    0.003894,
+    0.023848
+   ],
+   "null_mean_bits": 0.013673,
+   "null_q95_bits": 0.019243,
+   "p_value": 0.789,
+   "distinguishable_from_zero": false
+  },
+  "8": {
+   "mi_bits": 0.012769,
+   "boot_ci95": [
+    0.00452,
+    0.026498
+   ],
+   "null_mean_bits": 0.013185,
+   "null_q95_bits": 0.018605,
+   "p_value": 0.531,
+   "distinguishable_from_zero": false
+  },
+  "9": {
+   "mi_bits": 0.010717,
+   "boot_ci95": [
+    0.00357,
+    0.020123
+   ],
+   "null_mean_bits": 0.012816,
+   "null_q95_bits": 0.018104,
+   "p_value": 0.742,
+   "distinguishable_from_zero": false
+  },
+  "10": {
+   "mi_bits": 0.012201,
+   "boot_ci95": [
+    0.004824,
+    0.02675
+   ],
+   "null_mean_bits": 0.012561,
+   "null_q95_bits": 0.018137,
+   "p_value": 0.514,
+   "distinguishable_from_zero": false
+  }
+ },
+ "mi_first_lag_indistinguishable_from_zero": 3
+}

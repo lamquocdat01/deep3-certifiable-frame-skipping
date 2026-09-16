@@ -1,0 +1,1112 @@
+{
+  "meta": {
+    "generated": "2026-09-16 09:35:38",
+    "csv": "D:\\PhD Program\\03.Final Submission\\09.05 Certifiable worst-case\\Revision_IoTJ\\C2_mcu\\c2b_meter_logs\\ina219_campaign_20260731_to_20260801.csv",
+    "n_runs": 12,
+    "n_per_mode": 3,
+    "n_modes_used": 3,
+    "mc_draws": 100000,
+    "seed": 20260905,
+    "sample_rate_hz": 6.448484848484848,
+    "inputs": {
+      "I_idle": {
+        "value": 101.05,
+        "u": 0.009999999999995643,
+        "dof": 2,
+        "dist": "t",
+        "type": "A",
+        "unit": "mA",
+        "label": "Mean current, idle-skip (Type A over n=3 runs)"
+      },
+      "I_gate": {
+        "value": 101.29,
+        "u": 0.010000000000000378,
+        "dof": 2,
+        "dist": "t",
+        "type": "A",
+        "unit": "mA",
+        "label": "Mean current, gate (Type A over n=3 runs)"
+      },
+      "I_active": {
+        "value": 137.10666666666665,
+        "u": 0.17333333333333675,
+        "dof": 2,
+        "dist": "t",
+        "type": "A",
+        "unit": "mA",
+        "label": "Mean current, active (Type A over n=3 runs)"
+      },
+      "dIres_idle": {
+        "value": 0.0,
+        "u": 0.002886751345948129,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 0.005,
+        "type": "B",
+        "unit": "mA",
+        "label": "Log resolution of mean_ma (idle), 0.01 mA step"
+      },
+      "dIres_gate": {
+        "value": 0.0,
+        "u": 0.002886751345948129,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 0.005,
+        "type": "B",
+        "unit": "mA",
+        "label": "Log resolution of mean_ma (gate), 0.01 mA step"
+      },
+      "dIres_active": {
+        "value": 0.0,
+        "u": 0.002886751345948129,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 0.005,
+        "type": "B",
+        "unit": "mA",
+        "label": "Log resolution of mean_ma (active), 0.01 mA step"
+      },
+      "dIq_idle": {
+        "value": 0.0,
+        "u": 0.0006257827179021986,
+        "dof": Infinity,
+        "dist": "normal",
+        "type": "B",
+        "unit": "mA",
+        "label": "CURRENT-register quantization after averaging (idle)"
+      },
+      "dIq_gate": {
+        "value": 0.0,
+        "u": 0.0006257827179021986,
+        "dof": Infinity,
+        "dist": "normal",
+        "type": "B",
+        "unit": "mA",
+        "label": "CURRENT-register quantization after averaging (gate)"
+      },
+      "dIq_active": {
+        "value": 0.0,
+        "u": 0.0006257827179021986,
+        "dof": Infinity,
+        "dist": "normal",
+        "type": "B",
+        "unit": "mA",
+        "label": "CURRENT-register quantization after averaging (active)"
+      },
+      "I_off": {
+        "value": 0.0,
+        "u": 0.11547005383792516,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 0.2,
+        "type": "B",
+        "unit": "mA",
+        "label": "Residual zero offset + module self-supply (common to all modes)"
+      },
+      "g_R": {
+        "value": 1.0,
+        "u": 0.005773502691896258,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 0.01,
+        "type": "B",
+        "unit": "1",
+        "label": "Shunt-resistance scale error g_R (R=0.882 ohm) [ASSUMPTION +-1%]"
+      },
+      "V_ref": {
+        "value": 4.836108333333333,
+        "u": 0.007866860472060533,
+        "dof": 11,
+        "dist": "t",
+        "type": "A",
+        "unit": "V",
+        "label": "Reference bus voltage (grand mean over n=12 runs)"
+      },
+      "dV_res": {
+        "value": 0.0,
+        "u": 2.8867513459481293e-05,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 5e-05,
+        "type": "B",
+        "unit": "V",
+        "label": "Log resolution of mean_v, 0.0001 V step"
+      },
+      "f_gate": {
+        "value": 24.99,
+        "u": 0.002886751345948129,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 0.005,
+        "type": "B",
+        "unit": "1/s",
+        "label": "Frame/inference rate, gate (logged to 0.01 1/s)"
+      },
+      "f_active": {
+        "value": 13.88,
+        "u": 0.002886751345948129,
+        "dof": Infinity,
+        "dist": "rect",
+        "half": 0.005,
+        "type": "B",
+        "unit": "1/s",
+        "label": "Frame/inference rate, active (logged to 0.01 1/s)"
+      }
+    },
+    "standards": [
+      "JCGM 100:2008 (GUM)",
+      "JCGM 101:2008 (MCM)"
+    ],
+    "assumptions": [
+      "g_R: shunt scale error assumed rectangular +-1.0% -- rig_spec records R=0.882 ohm as measured but states neither method nor uncertainty. MUST be replaced by a 4-wire measurement (B1).",
+      "Aliasing is NOT in the budget: unquantified until the B2 pulse matrix runs. Section 6 gives labelled what-if scenarios only.",
+      "Dithering is assumed effective, so quantization averages as 1/sqrt(N); justified in budget_ina219_deep3.md section 3.",
+      "Residual offset and module self-supply assumed constant across modes, hence cancelling in the marginal differences."
+    ]
+  },
+  "reproduction_check": {
+    "reproduced": {
+      "v_ref": 4.836108333333333,
+      "E_idle": 0.04644521808723685,
+      "E_idle_err": 0.0027368107219304457,
+      "E_active": 12.479342949487659,
+      "E_active_err": 0.060493706783088734,
+      "kappa": 268.6895112872122,
+      "kappa_err": 15.938944414472918,
+      "margin_mw": 1.1606660000000488,
+      "s_comb_mw": 0.06839289994104183
+    },
+    "published": {
+      "v_ref": 4.836108333333333,
+      "E_idle": 0.04644521808723458,
+      "E_idle_err": 0.0027368107219298992,
+      "E_active": 12.47934294948767,
+      "E_active_err": 0.06049370678308981,
+      "kappa": 268.6895112872256,
+      "kappa_err": 15.938944414471324,
+      "margin_mw": 1.160665999999992,
+      "s_comb_mw": 0.06839289994102818
+    },
+    "match": {
+      "v_ref": true,
+      "E_idle": true,
+      "E_idle_err": true,
+      "E_active": true,
+      "E_active_err": true,
+      "kappa": true,
+      "kappa_err": true,
+      "margin_mw": true,
+      "s_comb_mw": true
+    },
+    "all_match": true
+  },
+  "gum": {
+    "E_idle": {
+      "value": 0.04644521808723665,
+      "u_c": 0.0028672782551346448,
+      "nu_eff": 4.8190364730278255,
+      "k_95": 2.776,
+      "U_95": 0.007959564436253773,
+      "U_k2": 0.0057345565102692895,
+      "rel_U95_pct": 17.13753269777647,
+      "contributions": [
+        {
+          "input": "I_gate",
+          "label": "Mean current, gate (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 101.29,
+          "u_i": 0.010000000000000378,
+          "dof": 2,
+          "sensitivity": 0.1935217420910502,
+          "u_contrib": 0.0019352174209105752,
+          "var_share_pct": 45.553300388997826
+        },
+        {
+          "input": "I_idle",
+          "label": "Mean current, idle-skip (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 101.05,
+          "u_i": 0.009999999999995643,
+          "dof": 2,
+          "sensitivity": -0.19352174205307499,
+          "u_contrib": -0.0019352174205299066,
+          "var_share_pct": 45.553300371076624
+        },
+        {
+          "input": "dIres_idle",
+          "label": "Log resolution of mean_ma (idle), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": -0.19352174206069306,
+          "u_contrib": -0.0005586491493639323,
+          "var_share_pct": 3.796108364558565
+        },
+        {
+          "input": "dIres_gate",
+          "label": "Log resolution of mean_ma (gate), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 0.19352174206069306,
+          "u_contrib": 0.0005586491493639323,
+          "var_share_pct": 3.796108364558565
+        },
+        {
+          "input": "g_R",
+          "label": "Shunt-resistance scale error g_R (R=0.882 ohm) [ASSUMPTION +-1%]",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1",
+          "value": 1.0,
+          "u_i": 0.005773502691896258,
+          "dof": Infinity,
+          "sensitivity": 0.04644521849427816,
+          "u_contrib": 0.00026815159400242483,
+          "var_share_pct": 0.8746233822484721
+        },
+        {
+          "input": "dIq_idle",
+          "label": "CURRENT-register quantization after averaging (idle)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": -0.19352174209137904,
+          "u_contrib": -0.00012110256173911148,
+          "var_share_pct": 0.1783885510226707
+        },
+        {
+          "input": "dIq_gate",
+          "label": "CURRENT-register quantization after averaging (gate)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": 0.19352174209137904,
+          "u_contrib": 0.00012110256173911148,
+          "var_share_pct": 0.1783885510226707
+        },
+        {
+          "input": "V_ref",
+          "label": "Reference bus voltage (grand mean over n=12 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "V",
+          "value": 4.836108333333333,
+          "u_i": 0.007866860472060533,
+          "dof": 11,
+          "sensitivity": 0.009603841536753718,
+          "u_contrib": 7.555208136542091e-05,
+          "var_share_pct": 0.06943096221174694
+        },
+        {
+          "input": "f_gate",
+          "label": "Frame/inference rate, gate (logged to 0.01 1/s)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1/s",
+          "value": 24.99,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": -0.0018585521450069805,
+          "u_contrib": -5.365177906113683e-06,
+          "var_share_pct": 0.00035012939451058985
+        },
+        {
+          "input": "dV_res",
+          "label": "Log resolution of mean_v, 0.0001 V step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "V",
+          "value": 0.0,
+          "u_i": 2.8867513459481293e-05,
+          "dof": Infinity,
+          "sensitivity": 0.009603841576166783,
+          "u_contrib": 2.772390259627206e-07,
+          "var_share_pct": 9.349083668519461e-07
+        },
+        {
+          "input": "I_active",
+          "label": "Mean current, active (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 137.10666666666665,
+          "u_i": 0.17333333333333675,
+          "dof": 2,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        },
+        {
+          "input": "dIres_active",
+          "label": "Log resolution of mean_ma (active), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        },
+        {
+          "input": "dIq_active",
+          "label": "CURRENT-register quantization after averaging (active)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        },
+        {
+          "input": "I_off",
+          "label": "Residual zero offset + module self-supply (common to all modes)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.11547005383792516,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        },
+        {
+          "input": "f_active",
+          "label": "Frame/inference rate, active (logged to 0.01 1/s)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1/s",
+          "value": 13.88,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        }
+      ]
+    },
+    "E_active": {
+      "value": 12.479342949487664,
+      "u_c": 0.09628901431337478,
+      "nu_eff": 12.8934982052935,
+      "k_95": 2.179,
+      "U_95": 0.20981376218884362,
+      "U_k2": 0.19257802862674955,
+      "rel_U95_pct": 1.6812885344853628,
+      "contributions": [
+        {
+          "input": "g_R",
+          "label": "Shunt-resistance scale error g_R (R=0.882 ohm) [ASSUMPTION +-1%]",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1",
+          "value": 1.0,
+          "u_i": 0.005773502691896258,
+          "dof": Infinity,
+          "sensitivity": 12.479342949931391,
+          "u_contrib": 0.07204952011452548,
+          "var_share_pct": 55.98977253910354
+        },
+        {
+          "input": "I_active",
+          "label": "Mean current, active (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 137.10666666666665,
+          "u_i": 0.17333333333333675,
+          "dof": 2,
+          "sensitivity": 0.3484227905577,
+          "u_contrib": 0.06039328369666919,
+          "var_share_pct": 39.33904433620025
+        },
+        {
+          "input": "V_ref",
+          "label": "Reference bus voltage (grand mean over n=12 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "V",
+          "value": 4.836108333333333,
+          "u_i": 0.007866860472060533,
+          "dof": 11,
+          "sensitivity": 2.5804514890246395,
+          "u_contrib": 0.02030005181907768,
+          "var_share_pct": 4.4446831953868084
+        },
+        {
+          "input": "I_gate",
+          "label": "Mean current, gate (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 101.29,
+          "u_i": 0.010000000000000378,
+          "dof": 2,
+          "sensitivity": -0.3484227906904415,
+          "u_contrib": -0.003484227906904547,
+          "var_share_pct": 0.1309361683785455
+        },
+        {
+          "input": "f_active",
+          "label": "Frame/inference rate, active (logged to 0.01 1/s)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1/s",
+          "value": 13.88,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": -0.8990881088392125,
+          "u_contrib": -0.0025954438083175546,
+          "var_share_pct": 0.07265571477461084
+        },
+        {
+          "input": "dIres_gate",
+          "label": "Log resolution of mean_ma (gate), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": -0.34842279092178646,
+          "u_contrib": -0.0010058099606524706,
+          "var_share_pct": 0.010911347379367747
+        },
+        {
+          "input": "dIres_active",
+          "label": "Log resolution of mean_ma (active), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 0.34842278876806826,
+          "u_contrib": 0.0010058099544352217,
+          "var_share_pct": 0.010911347244474347
+        },
+        {
+          "input": "dIq_gate",
+          "label": "CURRENT-register quantization after averaging (gate)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": -0.34842278926035747,
+          "u_contrib": -0.00021803696004241147,
+          "var_share_pct": 0.000512751281734389
+        },
+        {
+          "input": "dIq_active",
+          "label": "CURRENT-register quantization after averaging (active)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": 0.34842278926035747,
+          "u_contrib": 0.00021803696004241147,
+          "var_share_pct": 0.000512751281734389
+        },
+        {
+          "input": "dV_res",
+          "label": "Log resolution of mean_v, 0.0001 V step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "V",
+          "value": 0.0,
+          "u_i": 2.8867513459481293e-05,
+          "dof": Infinity,
+          "sensitivity": 2.580451496925207,
+          "u_contrib": 7.449121831902706e-05,
+          "var_share_pct": 5.984896890870094e-05
+        },
+        {
+          "input": "I_off",
+          "label": "Residual zero offset + module self-supply (common to all modes)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.11547005383792516,
+          "dof": Infinity,
+          "sensitivity": -3.8459253727671273e-11,
+          "u_contrib": -4.440892098500626e-12,
+          "var_share_pct": 2.1270953605484043e-19
+        },
+        {
+          "input": "I_idle",
+          "label": "Mean current, idle-skip (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 101.05,
+          "u_i": 0.009999999999995643,
+          "dof": 2,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        },
+        {
+          "input": "dIres_idle",
+          "label": "Log resolution of mean_ma (idle), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        },
+        {
+          "input": "dIq_idle",
+          "label": "CURRENT-register quantization after averaging (idle)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        },
+        {
+          "input": "f_gate",
+          "label": "Frame/inference rate, gate (logged to 0.01 1/s)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1/s",
+          "value": 24.99,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        }
+      ]
+    },
+    "kappa": {
+      "value": 268.68951128721346,
+      "u_c": 16.61543570963583,
+      "nu_eff": 4.786416648061047,
+      "k_95": 2.776,
+      "U_95": 46.12444952994906,
+      "U_k2": 33.23087141927166,
+      "rel_U95_pct": 17.166449597894687,
+      "contributions": [
+        {
+          "input": "I_gate",
+          "label": "Mean current, gate (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 101.29,
+          "u_i": 0.010000000000000378,
+          "dof": 2,
+          "sensitivity": -1127.041433878684,
+          "u_contrib": -11.270414338787267,
+          "var_share_pct": 46.01043044454016
+        },
+        {
+          "input": "I_idle",
+          "label": "Mean current, idle-skip (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 101.05,
+          "u_i": 0.009999999999995643,
+          "dof": 2,
+          "sensitivity": 1119.5396324787923,
+          "u_contrib": 11.195396324783045,
+          "var_share_pct": 45.39996063870655
+        },
+        {
+          "input": "dIres_gate",
+          "label": "Log resolution of mean_ma (gate), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": -1127.0414318651713,
+          "u_contrib": -3.2534883703760897,
+          "var_share_pct": 3.8342025233447554
+        },
+        {
+          "input": "dIres_idle",
+          "label": "Log resolution of mean_ma (idle), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 1119.5396306983591,
+          "u_contrib": 3.2318325357607596,
+          "var_share_pct": 3.783330041195385
+        },
+        {
+          "input": "I_active",
+          "label": "Mean current, active (Type A over n=3 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "mA",
+          "value": 137.10666666666665,
+          "u_i": 0.17333333333333675,
+          "dof": 2,
+          "sensitivity": 7.5018011521328765,
+          "u_contrib": 1.3003121997030576,
+          "var_share_pct": 0.6124516452711815
+        },
+        {
+          "input": "dIq_gate",
+          "label": "CURRENT-register quantization after averaging (gate)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": -1127.0414318670807,
+          "u_contrib": -0.7052830504221673,
+          "var_share_pct": 0.1801786900074129
+        },
+        {
+          "input": "dIq_idle",
+          "label": "CURRENT-register quantization after averaging (idle)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": 1119.539630728924,
+          "u_contrib": 0.7005885529167699,
+          "var_share_pct": 0.1777880658553555
+        },
+        {
+          "input": "f_active",
+          "label": "Frame/inference rate, active (logged to 0.01 1/s)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1/s",
+          "value": 13.88,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": -19.358033955605684,
+          "u_contrib": -0.055881830576254295,
+          "var_share_pct": 0.0011311436970521604
+        },
+        {
+          "input": "f_gate",
+          "label": "Frame/inference rate, gate (logged to 0.01 1/s)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1/s",
+          "value": 24.99,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 10.751881203192161,
+          "u_contrib": 0.031038007534789358,
+          "var_share_pct": 0.00034895080114625106
+        },
+        {
+          "input": "dIres_active",
+          "label": "Log resolution of mean_ma (active), 0.01 mA step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.002886751345948129,
+          "dof": Infinity,
+          "sensitivity": 7.501801107738871,
+          "u_contrib": 0.021655834444800348,
+          "var_share_pct": 0.0001698737901319664
+        },
+        {
+          "input": "dIq_active",
+          "label": "CURRENT-register quantization after averaging (active)",
+          "type": "B",
+          "dist": "normal",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.0006257827179021986,
+          "dof": Infinity,
+          "sensitivity": 7.501801092738868,
+          "u_contrib": 0.004694497476975812,
+          "var_share_pct": 7.982790857736572e-06
+        },
+        {
+          "input": "g_R",
+          "label": "Shunt-resistance scale error g_R (R=0.882 ohm) [ASSUMPTION +-1%]",
+          "type": "B",
+          "dist": "rect",
+          "unit": "1",
+          "value": 1.0,
+          "u_i": 0.005773502691896258,
+          "dof": Infinity,
+          "sensitivity": -2.3481681955966976e-06,
+          "u_contrib": -1.3557155398302713e-08,
+          "var_share_pct": 6.657538392961543e-17
+        },
+        {
+          "input": "I_off",
+          "label": "Residual zero offset + module self-supply (common to all modes)",
+          "type": "B",
+          "dist": "rect",
+          "unit": "mA",
+          "value": 0.0,
+          "u_i": 0.11547005383792516,
+          "dof": Infinity,
+          "sensitivity": -9.845568954283845e-10,
+          "u_contrib": -1.1368683772161602e-10,
+          "var_share_pct": 4.6816280248840635e-21
+        },
+        {
+          "input": "V_ref",
+          "label": "Reference bus voltage (grand mean over n=12 runs)",
+          "type": "A",
+          "dist": "t",
+          "unit": "V",
+          "value": 4.836108333333333,
+          "u_i": 0.007866860472060533,
+          "dof": 11,
+          "sensitivity": 3.6128401579441807e-09,
+          "u_contrib": 2.8421709430404007e-11,
+          "var_share_pct": 2.9260175155525406e-22
+        },
+        {
+          "input": "dV_res",
+          "label": "Log resolution of mean_v, 0.0001 V step",
+          "type": "B",
+          "dist": "rect",
+          "unit": "V",
+          "value": 0.0,
+          "u_i": 2.8867513459481293e-05,
+          "dof": Infinity,
+          "sensitivity": 0.0,
+          "u_contrib": 0.0,
+          "var_share_pct": 0.0
+        }
+      ]
+    }
+  },
+  "monte_carlo": {
+    "E_idle": {
+      "mean": 0.04645968051981721,
+      "median": 0.04643606071109237,
+      "std": 0.012231697846272344,
+      "ci95_low": 0.033489236679416855,
+      "ci95_high": 0.05867439124154846,
+      "U_95_halfwidth": 0.012592577281065803,
+      "ci95_prob_sym_low": 0.03384364684589689,
+      "ci95_prob_sym_high": 0.059083943039868886,
+      "n_draws": 100000,
+      "n_finite": 100000
+    },
+    "E_active": {
+      "mean": 12.479940267470377,
+      "median": 12.479015182021602,
+      "std": 0.2350015390555051,
+      "ci95_low": 12.18772795496499,
+      "ci95_high": 12.763584299614777,
+      "U_95_halfwidth": 0.28792817232489387,
+      "ci95_prob_sym_low": 12.194271560889751,
+      "ci95_prob_sym_high": 12.770270291444007,
+      "n_draws": 100000,
+      "n_finite": 100000
+    },
+    "kappa": {
+      "mean": 273.0577227822012,
+      "median": 268.6839763791637,
+      "std": 373.2732560074967,
+      "ci95_low": 198.24898368482528,
+      "ci95_high": 348.9553851007568,
+      "U_95_halfwidth": 75.35320070796577,
+      "ci95_prob_sym_low": 209.14872446335895,
+      "ci95_prob_sym_high": 365.39148071172633,
+      "n_draws": 100000,
+      "n_finite": 100000
+    }
+  },
+  "jcgm101_validation": {
+    "E_idle": {
+      "n_significant_digits": 2,
+      "delta": 5e-05,
+      "gum_interval": [
+        0.03848565365098288,
+        0.05440478252349042
+      ],
+      "mc_interval": [
+        0.033489236679416855,
+        0.05867439124154846
+      ],
+      "d_low": 0.004996416971566026,
+      "d_high": 0.004269608718058038,
+      "validated": false,
+      "d_low_over_delta": 99.92833943132051,
+      "d_high_over_delta": 85.39217436116076
+    },
+    "E_active": {
+      "n_significant_digits": 2,
+      "delta": 0.0005,
+      "gum_interval": [
+        12.26952918729882,
+        12.689156711676508
+      ],
+      "mc_interval": [
+        12.18772795496499,
+        12.763584299614777
+      ],
+      "d_low": 0.08180123233383085,
+      "d_high": 0.07442758793826876,
+      "validated": false,
+      "d_low_over_delta": 163.6024646676617,
+      "d_high_over_delta": 148.85517587653752
+    },
+    "kappa": {
+      "n_significant_digits": 2,
+      "delta": 0.5,
+      "gum_interval": [
+        222.5650617572644,
+        314.8139608171625
+      ],
+      "mc_interval": [
+        198.24898368482528,
+        348.9553851007568
+      ],
+      "d_low": 24.316078072439126,
+      "d_high": 34.14142428359429,
+      "validated": false,
+      "d_low_over_delta": 48.63215614487825,
+      "d_high_over_delta": 68.28284856718858
+    }
+  },
+  "replicate_study": [
+    {
+      "n_per_mode": 3,
+      "dof": 2,
+      "E_idle": {
+        "u_c": 0.0028672782551346448,
+        "nu_eff": 4.8190364730278255,
+        "k_95": 2.776,
+        "U_95_gum": 0.007959564436253773,
+        "U_95_mc": 0.012422977520873707,
+        "gum_vs_mc_pct": 56.07609713278069
+      },
+      "E_active": {
+        "u_c": 0.09628901431337478,
+        "nu_eff": 12.8934982052935,
+        "k_95": 2.179,
+        "U_95_gum": 0.20981376218884362,
+        "U_95_mc": 0.2859185848051382,
+        "gum_vs_mc_pct": 36.27255992283107
+      },
+      "kappa": {
+        "u_c": 16.61543570963583,
+        "nu_eff": 4.786416648061047,
+        "k_95": 2.776,
+        "U_95_gum": 46.12444952994906,
+        "U_95_mc": 74.69392429276111,
+        "gum_vs_mc_pct": 61.93997988910764
+      }
+    },
+    {
+      "n_per_mode": 5,
+      "dof": 4,
+      "E_idle": {
+        "u_c": 0.0022858765102254956,
+        "nu_eff": 10.814812272382595,
+        "k_95": 2.228,
+        "U_95_gum": 0.005092932864782404,
+        "U_95_mc": 0.006117403451074498,
+        "gum_vs_mc_pct": 20.11553290592736
+      },
+      "E_active": {
+        "u_c": 0.08836163677612276,
+        "nu_eff": 50.267702170236035,
+        "k_95": 2.009,
+        "U_95_gum": 0.17751852828323061,
+        "U_95_mc": 0.18641299392996036,
+        "gum_vs_mc_pct": 5.010443547920042
+      },
+      "kappa": {
+        "u_c": 13.208055261835124,
+        "nu_eff": 10.618094035373078,
+        "k_95": 2.228,
+        "U_95_gum": 29.427547123368658,
+        "U_95_mc": 35.815322980731224,
+        "gum_vs_mc_pct": 21.706790003880347
+      }
+    },
+    {
+      "n_per_mode": 10,
+      "dof": 9,
+      "E_idle": {
+        "u_c": 0.0017257437645042302,
+        "nu_eff": 31.61925335102998,
+        "k_95": 2.042,
+        "U_95_gum": 0.003523968767117638,
+        "U_95_mc": 0.003747931309351648,
+        "gum_vs_mc_pct": 6.355406561029087
+      },
+      "E_active": {
+        "u_c": 0.08191417634240038,
+        "nu_eff": 303.245339069683,
+        "k_95": 1.984,
+        "U_95_gum": 0.16251772586332236,
+        "U_95_mc": 0.154122257175632,
+        "gum_vs_mc_pct": -5.1658787637423424
+      },
+      "kappa": {
+        "u_c": 9.911495284952265,
+        "nu_eff": 30.303324898226418,
+        "k_95": 2.042,
+        "U_95_gum": 20.239273371872525,
+        "U_95_mc": 21.65284276390061,
+        "gum_vs_mc_pct": 6.984289238330995
+      }
+    },
+    {
+      "n_per_mode": 20,
+      "dof": 19,
+      "E_idle": {
+        "u_c": 0.001361863282817883,
+        "nu_eff": 103.54219034018575,
+        "k_95": 1.984,
+        "U_95_gum": 0.00270193675311068,
+        "U_95_mc": 0.0027708112474661394,
+        "gum_vs_mc_pct": 2.5490787034953977
+      },
+      "E_active": {
+        "u_c": 0.0784920951556151,
+        "nu_eff": 1216.9124622115203,
+        "k_95": 1.96,
+        "U_95_gum": 0.15384450650500558,
+        "U_95_mc": 0.141842449851997,
+        "gum_vs_mc_pct": -7.801420359860603
+      },
+      "kappa": {
+        "u_c": 7.754369495685333,
+        "nu_eff": 95.87174127995914,
+        "k_95": 2.0,
+        "U_95_gum": 15.508738991370667,
+        "U_95_mc": 15.84498799125177,
+        "gum_vs_mc_pct": 2.168125984119008
+      }
+    },
+    {
+      "n_per_mode": 30,
+      "dof": 29,
+      "E_idle": {
+        "u_c": 0.0012166203000696608,
+        "nu_eff": 226.4311673483354,
+        "k_95": 1.984,
+        "U_95_gum": 0.002413774675338207,
+        "U_95_mc": 0.0024245022873026906,
+        "gum_vs_mc_pct": 0.44443303155381025
+      },
+      "E_active": {
+        "u_c": 0.07731775070244902,
+        "nu_eff": 1784.567959946947,
+        "k_95": 1.96,
+        "U_95_gum": 0.15154279137680007,
+        "U_95_mc": 0.13889342402299398,
+        "gum_vs_mc_pct": -8.347059757104752
+      },
+      "kappa": {
+        "u_c": 6.886780726350454,
+        "nu_eff": 204.8314251445769,
+        "k_95": 1.984,
+        "U_95_gum": 13.663372961079302,
+        "U_95_mc": 13.720115023407558,
+        "gum_vs_mc_pct": 0.41528590700033113
+      }
+    }
+  ],
+  "aliasing": {
+    "effective_sample_rate_hz": 6.448484848484848,
+    "read_period_ms": 155.0751879699248,
+    "hw_integration_ms": 68.1,
+    "full_conversion_cycle_ms": 136.2,
+    "observation_duty_fraction": 0.43914181818181813,
+    "inference_rate_hz": 13.88,
+    "inference_period_ms": 72.04610951008645,
+    "nyquist_violated_on_read_rate": true,
+    "note": "Two-stage chain: 68.10 ms hardware boxcar (128-sample average) read once per ~155 ms. The boxcar is a real anti-alias filter -- this is NOT a naive point sampler -- but only ~44% of wall-clock time falls inside an integration window, and the unobserved 56% is not guaranteed independent of the inference phase, since the same MCU drives both. The residual bias is unquantified. Rows below are hypothetical sensitivities, NOT measurements; the real term comes from the B2 pulse matrix.",
+    "scenarios": [
+      {
+        "assumed_rel_bias_pct": 0.5,
+        "u_extra_mA": 0.39579285453846147,
+        "u_c_E_active": 0.16819298699855953,
+        "U95_E_active": 0.3664925186698612,
+        "rel_U95_pct": 2.936793388508547
+      },
+      {
+        "assumed_rel_bias_pct": 1.0,
+        "u_extra_mA": 0.7915857090769229,
+        "u_c_E_active": 0.29213147839571585,
+        "U95_E_active": 0.6365544914242648,
+        "rel_U95_pct": 5.100865438195192
+      },
+      {
+        "assumed_rel_bias_pct": 2.0,
+        "u_extra_mA": 1.5831714181538459,
+        "u_c_E_active": 0.5599539979733535,
+        "U95_E_active": 1.2201397615839373,
+        "rel_U95_pct": 9.777275666857363
+      },
+      {
+        "assumed_rel_bias_pct": 5.0,
+        "u_extra_mA": 3.9579285453846147,
+        "u_c_E_active": 1.3823900441203538,
+        "U95_E_active": 3.012227906138251,
+        "rel_U95_pct": 24.137712364591412
+      }
+    ]
+  },
+  "deep3_published": {
+    "E_idle": [
+      0.0464,
+      0.0027
+    ],
+    "E_active": [
+      12.4793,
+      0.0605
+    ],
+    "kappa": [
+      269.0,
+      16.0
+    ],
+    "note": "Type A only, k=1, no coverage probability stated"
+  }
+}

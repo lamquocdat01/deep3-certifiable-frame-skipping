@@ -80,6 +80,22 @@ Python 3.11 with `numpy`, `pandas`, `pyarrow`, `matplotlib`. Figures are
 rendered with the Okabe–Ito palette at IEEE column widths; `matplotlib` uses the
 `Agg` backend, so no display is required.
 
+## R1 additions (revision of 16 September 2026)
+
+`R1_additions/` holds the analyses added in the IEEE IoT-J R1 revision, with
+their JSON output committed alongside so every number the revised paper prints
+can be traced to the script that produced it:
+
+| file | answers | headline |
+|---|---|---|
+| `analyze_mdep.py` -> `a5_results.json` | reviewer comment on the choice of `m` | the dependence order is structural under the randomized-phase refresh (`m <= 2`, and `m <= R` conservatively), not estimated from autocorrelation; coverage swept over `m` for both policies, plus a mutual-information and a block-permutation test |
+| `analyze_relcorr.py` -> `a6_results.json` | reviewer comment on correlated invocation failures | persistence `rho_hat = 0.210 [0.188, 0.232]` measured at the invocation lag; the 95% certificate needs `k = 1` for every `rho` |
+| `gum_budget_ina219.json` | author-initiated correction | JCGM 101 re-analysis of the C2b campaign: central values unchanged, intervals widened to 95% Monte-Carlo |
+| `make_numbers_r1.py` -> `numbers_r1.json` | — | turns those JSONs into the LaTeX macros the manuscript uses, so no revised number is typed by hand |
+
+See `R1_additions/README_R1.md` for the protocols and for the `DATA` path the
+two analysis scripts expect.
+
 ## License and citation
 
 Please cite the paper above if you use this harness. Third-party datasets keep
