@@ -69,35 +69,59 @@
   "within_budget": true,
   "videos": 121
  },
- "coverage_randomized_phase": {
-  "1": 0.9742,
-  "2": 0.9965,
-  "3": 0.9999,
-  "4": 1.0,
-  "5": 1.0,
+ "centre_cross_check": {
+  "randomized_phase": {
+   "analytic_mean": 0.3012,
+   "simulated_mean": 0.3012,
+   "simulated_ci95": [
+    0.2924,
+    0.31
+   ],
+   "abs_gap": 1e-05,
+   "within_sim_ci": true,
+   "within_tolerance_0p005": true
+  },
+  "jittered_no_boundary": {
+   "analytic_mean": 0.4269,
+   "simulated_mean": 0.4273,
+   "simulated_ci95": [
+    0.4151,
+    0.4406
+   ],
+   "abs_gap": 0.00046,
+   "within_sim_ci": true,
+   "within_tolerance_0p005": true
+  }
+ },
+ "coverage_randomized_phase_matched_centre": {
+  "1": 0.9088,
+  "2": 0.9481,
+  "3": 0.9753,
+  "4": 0.994,
+  "5": 0.9995,
   "6": 1.0,
   "8": 1.0,
   "10": 1.0
  },
- "coverage_randomized_phase_ci95": {
+ "coverage_randomized_phase_matched_centre_ci95": {
   "1": [
-   0.9467,
-   1.0
+   0.88,
+   0.9333
   ],
   "2": [
-   0.9867,
-   1.0
+   0.9333,
+   0.9733
   ],
   "3": [
-   1.0,
+   0.96,
    1.0
   ],
   "4": [
-   1.0,
+   0.9733,
    1.0
   ],
   "5": [
-   1.0,
+   0.9867,
    1.0
   ],
   "6": [
@@ -113,15 +137,63 @@
    1.0
   ]
  },
- "randomized_phase_realised_miss_rate": {
-  "mean": 0.3012,
-  "ci95": [
-   0.2924,
-   0.31
-  ],
-  "budget_centre_used": 0.4073
+ "coverage_jittered_no_boundary_matched_centre": {
+  "1": 0.8841,
+  "2": 0.9279,
+  "3": 0.9505,
+  "4": 0.967,
+  "5": 0.9832,
+  "6": 0.9949,
+  "8": 1.0,
+  "10": 1.0
  },
- "coverage_jittered_no_boundary": {
+ "coverage_randomized_phase_per_video_centre": {
+  "1": 1.0,
+  "2": 1.0,
+  "3": 1.0,
+  "4": 1.0,
+  "5": 1.0,
+  "6": 1.0,
+  "8": 1.0,
+  "10": 1.0
+ },
+ "coverage_jittered_no_boundary_per_video_centre": {
+  "1": 1.0,
+  "2": 1.0,
+  "3": 1.0,
+  "4": 1.0,
+  "5": 1.0,
+  "6": 1.0,
+  "8": 1.0,
+  "10": 1.0
+ },
+ "coverage_fixed_phase_per_video_centre": {
+  "1": 1.0,
+  "2": 1.0,
+  "3": 1.0,
+  "4": 1.0,
+  "5": 1.0,
+  "6": 1.0,
+  "8": 1.0,
+  "10": 1.0
+ },
+ "centre_definitions": {
+  "fixed_phase_pooled": 0.4073,
+  "randomized_phase_pooled": 0.3012,
+  "jittered_pooled": 0.4269,
+  "note": "Table S3 uses the pooled own centre for every column, so the columns are on the same footing. The *_per_video_centre maps additionally remove between-video duration heterogeneity and therefore isolate within-video concentration."
+ },
+ "coverage_randomized_phase_UNMATCHED_centre_do_not_report": {
+  "1": 0.9742,
+  "2": 0.9965,
+  "3": 0.9999,
+  "4": 1.0,
+  "5": 1.0,
+  "6": 1.0,
+  "8": 1.0,
+  "10": 1.0
+ },
+ "coverage_jittered_no_boundary_UNMATCHED_centre_do_not_report": {
   "1": 0.8703,
   "2": 0.9171,
   "3": 0.9449,
@@ -131,7 +203,19 @@
   "8": 0.9996,
   "10": 1.0
  },
+ "UNMATCHED_centre_note": "These two maps centre every budget on the fixed-phase mean 0.4073 even though the configurations miss 0.3012 and 0.4269. The surplus is slack, not concentration, so the numbers are not reported anywhere. Kept for the audit trail of the 2026-09-16 FIX2.",
+ "randomized_phase_realised_miss_rate": {
+  "mean": 0.3012,
+  "ci95": [
+   0.2924,
+   0.31
+  ],
+  "analytic_mean": 0.3012,
+  "budget_centre_used": 0.3012
+ },
  "jittered_realised_miss_rate": 0.4273,
+ "jittered_analytic_miss_rate": 0.4269,
+ "fixed_phase_budget_centre_used": 0.4073,
  "activation_price": {
   "fixed_phase_activation": 0.2,
   "fixed_phase_energy_mJ": 82.5,

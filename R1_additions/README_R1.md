@@ -36,7 +36,13 @@ VIRAT placeholder rows. It
   `m <= R` under the randomized-phase refresh (Corollary S4' in the paper);
 * sweeps coverage over `m` for the fixed-phase policy, the randomized-phase
   policy with the forced boundary OPEN, and the cheaper variant without it,
-  reporting the activation each costs;
+  reporting the activation each costs. Each configuration's budget is centred on
+  its OWN mean miss rate, computed analytically per event and cross-checked
+  against the simulation (0.4073 fixed phase, 0.3012 randomized phase, 0.4269
+  without the boundary OPEN). Centring every configuration on the fixed-phase
+  mean, as the first version did, credits the boundary OPEN's lower miss rate as
+  concentration and makes every `m` "pass" on slack; those numbers survive in the
+  JSON only under `..._UNMATCHED_centre_do_not_report`;
 * replaces the autocorrelation-only diagnostic with lagged mutual information
   against a permutation null and a block-permutation test. Both are reported as
   they came out, including the fact that the run statistic still rejects

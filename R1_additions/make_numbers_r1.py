@@ -31,10 +31,20 @@ M["rnEvents"] = thousands(A5["protocol"]["events"])
 M["rnNvid"] = str(A5["n_videos_ge5"])
 M["rnPfor"] = "%.4f" % A5["p_formula"]
 M["rnPsim"] = "%.4f" % A5["p_simulated_fixed_phase"]
-cf, cr, cj = A5["coverage_fixed_phase"], A5["coverage_randomized_phase"], A5["coverage_jittered_no_boundary"]
+# FIX2 2026-09-16: every configuration is centred on its OWN pooled mean miss
+# rate, so each column of Table S3 measures concentration rather than the slack
+# left by borrowing the fixed-phase centre. The *_per_video_centre maps also
+# strip between-video duration heterogeneity and are quoted as a diagnostic.
+cf = A5["coverage_fixed_phase"]
+cr = A5["coverage_randomized_phase_matched_centre"]
+cj = A5["coverage_jittered_no_boundary_matched_centre"]
 for tag, d in (("Fix", cf), ("Rand", cr), ("Jit", cj)):
     for k, name in (("1", "One"), ("2", "Two"), ("5", "Five")):
         M["rnCov%s%s" % (tag, name)] = "%.1f" % (d[k] * 100)
+M["rnCovRandPvOne"] = "%.1f" % (A5["coverage_randomized_phase_per_video_centre"]["1"] * 100)
+M["rnCovFixPvOne"] = "%.1f" % (A5["coverage_fixed_phase_per_video_centre"]["1"] * 100)
+M["rnMissRandFormula"] = "%.4f" % A5["randomized_phase_realised_miss_rate"]["analytic_mean"]
+M["rnMissJitFormula"] = "%.4f" % A5["jittered_analytic_miss_rate"]
 M["rnMStruct"] = str(A5["structural"]["m_structural_tight"])
 M["rnMaxOnsetsBlock"] = str(A5["structural"]["max_onsets_in_one_block_observed"])
 M["rnOnsetSep"] = str(A5["structural"]["min_onset_separation_frames"])
@@ -60,6 +70,18 @@ M["rnEratio"] = "%.2f" % ap["energy_ratio"]
 M["rnGapJit"] = str(ap["jittered_max_refresh_gap"])
 M["rnMissRand"] = "%.3f" % A5["randomized_phase_realised_miss_rate"]["mean"]
 M["rnMissJit"] = "%.3f" % A5["jittered_realised_miss_rate"]
+
+# The re-draw period is a knob: with T = cR the extra activation is
+# 1/T - 1/(RT), so the total is 1/R + 1/T - 1/(RT). c = 1 reproduces the
+# (2R-1)/R^2 = 0.36 of the T = R configuration; c = 3 is the illustration the
+# supplement quotes.
+_R = A5["protocol"]["R"]
+_E = lambda a: 30.4 + min(a, 1.0) * (290.8 - 30.4)
+_act = lambda T: 1.0 / _R + 1.0 / T - 1.0 / (_R * T)
+assert abs(_act(_R) - A5["activation_price"]["randomized_phase_activation"]) < 1e-9
+M["rnActTthree"] = "%.2f" % _act(3 * _R)
+M["rnEratioTthree"] = "%.2f" % (_E(_act(3 * _R)) / _E(1.0 / _R))
+M["rnMstructTthree"] = str(-(-(3 * _R) // 2))          # ceil(T/2)
 
 # ---- A6: invocation-failure persistence -----------------------------------
 M["rnPhat"] = "%.3f" % A6["events"]["p_hat"]
