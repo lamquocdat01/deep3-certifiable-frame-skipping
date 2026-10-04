@@ -52,6 +52,14 @@ JSON/CSV results above; it does not recompute them.
   filter is why the ablation runs on exactly the population Setup and Table I
   report.
 
+## Event generation detector
+
+The per-frame labels `g_t` behind the 121-video corpus (CDnet2014, LASIESTA,
+BMC; 3,713 events) come from always-on detections of **YOLO26s-seg**
+(Ultralytics, COCO-trained), run on CPU in FP32 at `imgsz = 640` with confidence
+threshold 0.25. The paper's Sec. VII (Setup) names this detector; the hardware
+energy table uses YOLOv3-class and YOLO26s workloads as listed there.
+
 ## Hardware measurements
 
 * **Jetson Orin Nano 8 GB @ 15 W**, onboard INA3221 on the VDD_IN rail, 10 Hz,
