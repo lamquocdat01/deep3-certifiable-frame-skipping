@@ -1,9 +1,13 @@
 # Certifiable Worst-Case Detection Latency for Energy-Efficient Frame-Skipping at the Edge
 
+> **Status:** Accepted for publication in IEEE Internet of Things Journal
+> (accepted 1 Oct 2026, manuscript IoT-73307-2026). DOI will be added when
+> assigned.
+
 Evaluation harness, measurement logs and microcontroller firmware for the
 manuscript *"Certifiable Worst-Case Detection Latency for Energy-Efficient
 Frame-Skipping at the Edge"* (IEEE Internet of Things Journal, manuscript
-IoT-68470-2026).
+IoT-73307-2026; earlier round IoT-68470-2026).
 
 Single author: Lam Quoc Dat, School of Business and Technology (FSB), FPT
 University, Ho Chi Minh City, Vietnam · ORCID 0009-0004-5432-9343.
@@ -108,3 +112,15 @@ two analysis scripts expect.
 
 Please cite the paper above if you use this harness. Third-party datasets keep
 their own licenses and are not redistributed here.
+
+Provisional citation (in press; volume, pages and DOI to follow):
+
+```bibtex
+@article{lam2026certifiable,
+  author  = {Lam, Quoc Dat},
+  title   = {Certifiable Worst-Case Detection Latency for Energy-Efficient Frame-Skipping at the Edge},
+  journal = {IEEE Internet of Things Journal},
+  year    = {2026},
+  note    = {In press; accepted 1 Oct 2026, manuscript IoT-73307-2026}
+}
+```
